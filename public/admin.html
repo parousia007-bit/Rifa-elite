@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Rifa Lael</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background: #0a0a0a; color: white; font-family: sans-serif; }
+        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body class="p-6">
+    <div id="login" class="max-w-sm mx-auto mt-20 text-center">
+        <h1 class="text-3xl font-black text-orange-500 mb-6 italic">ACCESO ADMIN</h1>
+        <input id="pass" type="password" placeholder="Contraseña" class="w-full h-14 glass rounded-2xl px-4 mb-4 outline-none border-orange-500/50">
+        <button onclick="checkPass()" class="w-full bg-orange-600 h-14 rounded-2xl font-black">ENTRAR</button>
+    </div>
+
+    <div id="panel" class="hidden max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="glass p-8 rounded-[40px]">
+                <h2 class="text-xl font-bold mb-4">Balance General</h2>
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="glass p-6 rounded-3xl">
+                    <p class="text-gray-400 text-sm">Ventas Totales</p>
+                    <p id="stat-total" class="text-4xl font-black text-orange-500">$0</p>
+                </div>
+                <div class="glass p-6 rounded-3xl">
+                    <p class="text-gray-400 text-sm">Boletos Vendidos</p>
+                    <p id="stat-count" class="text-4xl font-black">0 / 1501</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-black mb-6">Gestionar Boletos</h2>
+        <div id="lista-ventas" class="space-y-3"></div>
+    </div>
+
+    <script>
+        let bData = {};
+        const PASS = "Lael2025";
+
+        function checkPass() {
+            if(document.getElementById('pass').value === PASS) {
+                document.getElementById('login').classList.add('hidden');
+                document.getElementById('panel').classList.remove('hidden');
+                cargarAdmin();
+            } else { alert("Error"); }
+        }
+
+        async function cargarAdmin() {
+            const res = await fetch('/api/boletos');
+            bData = await res.json();
+            procesarStats();
+            listarVentas();
+        }
+
+        function procesarStats() {
+            let vendidos = 0; let total = 1501;
+            Object.values(bData).forEach(s => s.forEach(b => { if(b.estado==='vendido') vendidos++; }));
+            
+            document.getElementById('stat-count').innerText = `${vendidos} / ${total}`;
+            // Suponiendo costo de $100 (ajusta según necesites)
+            document.getElementById('stat-total').innerText = `$${vendidos * 100}`; 
+
+            new Chart(document.getElementById('salesChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Vendidos', 'Disponibles'],
+                    datasets: [{
+                        data: [vendidos, total - vendidos],
+                        backgroundColor: ['#FF6B00', '#222'],
+                        borderWidth: 0
+                    }]
+                }
+            });
+        }
+
+        function listarVentas() {
+            let html = "";
+            Object.keys(bData).forEach(s => {
+                bData[s].forEach(b => {
+                    if(b.estado === 'vendido') {
+                        html += `
+                        <div class="glass p-4 rounded-2xl flex justify-between items-center">
+                            <div>
+                                <p class="text-orange-500 font-bold">${s}${b.numero}</p>
+                                <input id="edit-${s}-${b.numero}" value="${b.nombre_completo}" class="bg-transparent border-b border-white/20 outline-none text-sm">
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="updateB('${s}', ${b.numero}, 'vendido')" class="text-[10px] bg-green-600 px-3 py-2 rounded-xl font-bold">GUARDAR</button>
+                                <button onclick="updateB('${s}', ${b.numero}, 'disponible')" class="text-[10px] bg-red-900 px-3 py-2 rounded-xl font-bold">LIBERAR</button>
+                            </div>
+                        </div>`;
+                    }
+                });
+            });
+            document.getElementById('lista-ventas').innerHTML = html;
+        }
+
+        async function updateB(serie, numero, estado) {
+            const nuevoNombre = document.getElementById(`edit-${serie}-${numero}`).value;
+            await fetch('/api/admin/update', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ password: PASS, serie, numero, nuevoNombre, nuevoEstado: estado })
+            });
+            alert("Actualizado");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa Lael - Un Corazón Guerrero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body { background: #050505; color: white; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); }
+        
+        /* ESTILO ELITE (Suave pero con textos vibrantes) */
+        .sold-card { 
+            background: #0a0a0a !important;
+            border: 1.5px solid rgba(255, 107, 0, 0.4) !important;
+            opacity: 1 !important;
+        }
+
+        /* AJUSTE DE COLOR SOLICITADO */
+        .ticket-num-soft { 
+            color: #FFFFFF !important; 
+            text-shadow: 0 0 10px rgba(255,255,255,0.8) !important; 
+        }
+        .text-soft-orange { 
+            color: #FF6B00 !important; 
+            font-weight: 900 !important; 
+            text-shadow: 0 0 5px #FF6B00, 0 0 15px #FF6B00 !important;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .swiper-pagination-bullet { background: #FF6B00 !important; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <section class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+        <div class="mb-6 rounded-[45px] overflow-hidden swiper mySwiper w-full max-w-lg aspect-[4/5] glass border border-white/10 shadow-2xl">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/img/foto1.jpg"></div>
+                <div class="swiper-slide"><img src="/img/foto2.jpg"></div>
+                <div class="swiper-slide"><img src="/img/foto3.jpg"></div>
+                <div class="swiper-slide"><img src="/img/foto4.jpg"></div>
+                <div class="swiper-slide"><img src="/img/foto5.jpg"></div>
+                <div class="swiper-slide relative">
+                    <img src="/img/terreno1.jpg" style="display:block; width:100%;" onerror="this.src='https://via.placeholder.com/800x600/0a0a0a/FF6B00?text=Terreno+1'">
+                    <div class="absolute bottom-0 left-0 w-full bg-black/80 text-orange-500 text-[10px] p-3 font-bold uppercase text-center tracking-widest">Premio: Terreno en Chiapas</div>
+                </div>
+                <div class="swiper-slide relative">
+                    <img src="/img/terreno2.jpg" style="display:block; width:100%;" onerror="this.src='https://via.placeholder.com/800x600/0a0a0a/FF6B00?text=Terreno+2'">
+                    <div class="absolute bottom-0 left-0 w-full bg-black/80 text-orange-500 text-[10px] p-3 font-bold uppercase text-center tracking-widest">Ubicación San Fernando</div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+        <h1 class="text-6xl font-black italic tracking-tighter text-orange-500 mb-2 uppercase">Rifa Lael</h1>
+        <p class="text-gray-400 max-w-md text-sm mb-8 italic">8 meses de vida, operado del corazón. Tu ayuda es su esperanza.<div class="mt-4 mb-2 text-center"><span class="bg-orange-500/20 text-orange-500 border border-orange-500/30 px-6 py-2 rounded-full font-black text-xl tracking-tighter italic shadow-lg shadow-orange-500/10">COSTO POR BOLETO: $100 MXN</span></div></p>
+        
+        <div class="flex gap-4 mb-10" id="countdown">
+            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="days" class="text-2xl font-black block text-orange-500">00</span><span class="text-[9px] text-gray-400 uppercase">Días</span></div>
+            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="hours" class="text-2xl font-black block text-orange-500">00</span><span class="text-[9px] text-gray-400 uppercase">Hrs</span></div>
+            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="mins" class="text-2xl font-black block text-orange-500">00</span><span class="text-[9px] text-gray-400 uppercase">Min</span></div>
+        </div>
+
+        <a href="#boletos" class="bg-orange-600 px-10 py-5 rounded-full font-black text-lg shadow-xl active:scale-95 transition-all uppercase tracking-tighter">Ver Boletos</a>
+    </section>
+
+    <section class="p-6 max-w-4xl mx-auto space-y-6">
+        <h2 class="text-2xl font-black italic border-l-4 border-orange-500 pl-4 uppercase">Grandes Premios</h2><p class="text-orange-500 font-bold text-xs mt-2 italic animate-pulse">¡UN SOLO BOLETO PARTICIPA EN LAS 2 RIFAS!</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="glass p-8 rounded-[35px] border-orange-500/10">
+                <h3 class="text-lg font-black text-orange-500 uppercase">Fase 1: Reyes</h3>
+                <p class="text-xs text-gray-500 italic">Terreno 10x20m - San Fernando, Chiapas.</p>
+                <p class="text-sm font-bold mt-3">Sorteo: 06 de Enero</p>
+            </div>
+            <div class="glass p-8 rounded-[35px] border-white/5">
+                <h3 class="text-lg font-black text-white uppercase">Fase 2: Valentín</h3>
+                <p class="text-xs text-gray-500 italic">Terreno 10x20m - San Fernando, Chiapas.</p>
+                <p class="text-sm font-bold mt-3 text-gray-400">Sorteo: 14 de Febrero</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-6 max-w-lg mx-auto mt-8">
+        <div class="glass p-8 rounded-[40px] border-blue-500/10 text-center">
+            <p class="text-white font-black italic text-2xl mb-1 tracking-tighter">BBVA</p>
+            <p class="text-gray-500 text-[10px] uppercase mb-4 tracking-widest">Tarjeta de Selene</p>
+            <div class="flex flex-col gap-4 items-center bg-white/5 p-6 rounded-3xl border border-white/5">
+                <span id="card-num" class="text-xl font-mono font-bold tracking-tighter text-white">4152 3145 2647 1894</span>
+                <button onclick="copyCard()" class="w-full bg-orange-500/10 text-orange-500 font-bold py-3 rounded-2xl border border-orange-500/20 uppercase text-xs">Copiar Número</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="boletos" class="p-6 mt-16">
+        <div class="flex flex-col items-center mb-8">
+            <h2 class="text-3xl font-black italic uppercase mb-6 tracking-tighter">Elige tu número</h2>
+            <input id="search" oninput="buscarBoleto()" type="text" placeholder="Buscar mi nombre..." class="w-full max-w-md h-14 glass rounded-3xl px-6 outline-none focus:border-orange-500/50 text-sm">
+        </div>
+
+        <div id="series-nav" class="flex gap-2 overflow-x-auto no-scrollbar mb-8 py-2 max-w-4xl mx-auto"></div>
+        <div id="tickets-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 max-w-5xl mx-auto"></div>
+    </section>
+
+    <div id="modal" class="fixed inset-0 bg-black/95 backdrop-blur-3xl hidden z-50 flex items-center justify-center p-6">
+        <div class="glass w-full max-w-sm rounded-[45px] p-10 border-orange-500/20">
+            <h2 class="text-xl font-black text-orange-500 mb-6 uppercase italic">Apartar Boleto</h2><p class="text-white font-bold text-center mb-4 italic text-sm opacity-80">Donativo por boleto: $100.00 MXN</p>
+            <div id="modal-target" class="text-center mb-8 py-4 bg-orange-600/5 rounded-2xl font-black text-4xl text-orange-500 border border-orange-500/10 tracking-tighter"></div>
+            <input id="form-nombre" type="text" placeholder="Nombre completo" class="w-full bg-white/5 border border-white/10 h-14 rounded-2xl px-4 mb-3 outline-none focus:border-orange-500">
+            <input id="form-tel" type="tel" placeholder="WhatsApp" class="w-full bg-white/5 border border-white/10 h-14 rounded-2xl px-4 mb-6 outline-none focus:border-orange-500">
+            <button onclick="confirmarCompra()" class="w-full bg-orange-600 h-16 rounded-3xl font-black text-lg shadow-xl active:scale-95 transition-all">CONFIRMAR</button>
+            <button onclick="cerrarModal()" class="w-full mt-6 text-gray-600 text-[10px] font-bold uppercase tracking-widest">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let bData = {}; let sActiva = 'A'; let selNum = null;
+        const WA_NUM = "529983016050";
+
+        async function init() {
+            const res = await fetch('/api/boletos');
+            bData = await res.json();
+            renderSeries(); renderTickets();
+            new Swiper(".mySwiper", { pagination: { el: ".swiper-pagination" }, autoplay: { delay: 4000 }, loop: true });
+            initCountdown();
+        }
+
+        function initCountdown() {
+            const target = new Date("Jan 6, 2026 00:00:00").getTime();
+            setInterval(() => {
+                const now = new Date().getTime();
+                const diff = target - now;
+                if (diff > 0) {
+                    document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                    document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                    document.getElementById('mins').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                }
+            }, 1000);
+        }
+
+        function copyCard() {
+            navigator.clipboard.writeText("4152314526471894");
+            alert("Tarjeta copiada.");
+        }
+
+        function renderSeries() {
+            document.getElementById('series-nav').innerHTML = Object.keys(bData).map(s => `
+                <button onclick="sActiva='${s}';renderSeries();renderTickets()" class="px-6 py-4 rounded-[20px] font-black transition-all ${sActiva==s?'bg-orange-600 text-white shadow-xl scale-105':'glass text-gray-600'}">${s}</button>
+            `).join('');
+        }
+
+        function renderTickets() {
+            const grid = document.getElementById('tickets-grid');
+            grid.innerHTML = bData[sActiva].map(b => {
+                const isV = b.estado === 'vendido';
+                return `
+                <div onclick="${isV ? '' : `abrirM(${b.numero})`}" 
+                     class="h-24 rounded-[30px] flex flex-col items-center justify-center relative transition-all ${isV ? 'sold-card' : 'glass border-white/5 active:scale-95'}">
+                    <span class="text-[8px] absolute top-2 opacity-20 font-bold tracking-widest">${sActiva}</span>
+                    <span class="text-2xl font-black ${isV ? 'ticket-num-soft' : 'text-white/40'}">${b.numero}</span>
+                    ${isV ? `<span class="text-[7px] text-soft-orange truncate px-2 w-full text-center mt-1 uppercase">${b.nombre_completo || 'Vendido'}</span>` : ''}
+                </div>`;
+            }).join('');
+        }
+
+        function abrirM(n) {
+            selNum = n;
+            document.getElementById('modal-target').innerText = `${sActiva}${n}`;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function cerrarModal() { document.getElementById('modal').classList.add('hidden'); }
+
+        async function confirmarCompra() {
+            const n = document.getElementById('form-nombre').value;
+            const t = document.getElementById('form-tel').value;
+            if(!n || !t) return alert("Llena tus datos.");
+            const r = await fetch('/api/comprar', {
+                method: 'POST', headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ serie: sActiva, numero: selNum, nombre: n, telefono: t })
+            });
+            if(r.ok) { 
+                const msg = encodeURIComponent(`Hola Selene, aparté el boleto ${sActiva}${selNum} para ayudar a Lael. Soy ${n}.`);
+                window.location.href = `https://wa.me/${WA_NUM}?text=${msg}`;
+            }
+        }
+
+        function buscarBoleto() {
+            const q = document.getElementById('search').value.toLowerCase();
+            if(!q) { renderTickets(); return; }
+            let res = "";
+            Object.keys(bData).forEach(s => {
+                bData[s].forEach(b => {
+                    if(b.nombre_completo && b.nombre_completo.toLowerCase().includes(q)) {
+                        res += `<div class="h-24 rounded-[30px] sold-card flex flex-col items-center justify-center relative">
+                            <span class="text-[8px] absolute top-2 opacity-20">${s}</span>
+                            <span class="text-2xl font-black ticket-num-soft">${b.numero}</span>
+                            <span class="text-[7px] text-soft-orange truncate px-2 w-full text-center mt-1 uppercase">${b.nombre_completo}</span>
+                        </div>`;
+                    }
+                });
+            });
+            document.getElementById('tickets-grid').innerHTML = res || "<p class='col-span-3 text-center text-gray-700 py-10'>Sin resultados</p>";
+        }
+
+        init();
+    </script>
+</body>
+</html>
