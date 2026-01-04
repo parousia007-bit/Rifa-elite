@@ -24,7 +24,7 @@ const getBoletosAgrupados = async () => {
   }, {});
 };
 
-// RUTA PARA VER BOLETOS
+// SOPORTE PARA AMBAS RUTAS (Evita errores visuales)
 app.get('/api/tickets', async (req, res) => {
   try {
     const agrupados = await getBoletosAgrupados();
@@ -34,11 +34,19 @@ app.get('/api/tickets', async (req, res) => {
   }
 });
 
-// RUTA PARA PROCESAR LA COMPRA (¡La que faltaba!)
+app.get('/api/boletos', async (req, res) => {
+  try {
+    const agrupados = await getBoletosAgrupados();
+    res.json(agrupados);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// RUTA PARA PROCESAR LA COMPRA
 app.post('/api/comprar', async (req, res) => {
   try {
     const { serie, numero, nombre, telefono } = req.body;
-    
     const result = await mongoose.connection.db.collection('tickets').updateOne(
       { serie: serie, numero: parseInt(numero) },
       { 
@@ -50,17 +58,15 @@ app.post('/api/comprar', async (req, res) => {
         } 
       }
     );
-
     if (result.matchedCount > 0) {
-      res.json({ success: true, message: '¡Boleto apartado con éxito!' });
+      res.json({ success: true });
     } else {
       res.status(404).json({ error: 'Boleto no encontrado.' });
     }
   } catch (error) {
-    console.error('Error en compra:', error);
-    res.status(500).json({ error: 'Error interno al procesar la compra.' });
+    res.status(500).json({ error: error.message });
   }
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Servidor Rifa Lael en puerto ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Servidor Rifa Lael listo`));
