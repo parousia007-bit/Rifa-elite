@@ -15,7 +15,6 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ Conectado a MongoDB Atlas'))
   .catch(err => console.error('❌ Error de conexión:', err));
 
-// Función para obtener y agrupar boletos
 const getBoletosAgrupados = async () => {
   const tickets = await mongoose.connection.db.collection('tickets').find({}).toArray();
   return tickets.reduce((acc, t) => {
@@ -25,6 +24,7 @@ const getBoletosAgrupados = async () => {
   }, {});
 };
 
+// RUTA PARA VER BOLETOS
 app.get('/api/tickets', async (req, res) => {
   try {
     const agrupados = await getBoletosAgrupados();
@@ -34,13 +34,31 @@ app.get('/api/tickets', async (req, res) => {
   }
 });
 
-// Duplicamos la ruta para que el frontend no falle si busca 'boletos'
-app.get('/api/boletos', async (req, res) => {
+// RUTA PARA PROCESAR LA COMPRA (¡La que faltaba!)
+app.post('/api/comprar', async (req, res) => {
   try {
-    const agrupados = await getBoletosAgrupados();
-    res.json(agrupados);
+    const { serie, numero, nombre, telefono } = req.body;
+    
+    const result = await mongoose.connection.db.collection('tickets').updateOne(
+      { serie: serie, numero: parseInt(numero) },
+      { 
+        $set: { 
+          estado: 'vendido', 
+          nombre_completo: nombre, 
+          comprador: nombre,
+          telefono: telefono 
+        } 
+      }
+    );
+
+    if (result.matchedCount > 0) {
+      res.json({ success: true, message: '¡Boleto apartado con éxito!' });
+    } else {
+      res.status(404).json({ error: 'Boleto no encontrado.' });
+    }
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error('Error en compra:', error);
+    res.status(500).json({ error: 'Error interno al procesar la compra.' });
   }
 });
 
