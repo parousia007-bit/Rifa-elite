@@ -12,26 +12,36 @@ app.use(express.json());
 app.use(express.static('public'));
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ Conectado a MongoDB Atlas (Base de datos: test)'))
+  .then(() => console.log('✅ Conectado a MongoDB Atlas'))
   .catch(err => console.error('❌ Error de conexión:', err));
+
+// Función para obtener y agrupar boletos
+const getBoletosAgrupados = async () => {
+  const tickets = await mongoose.connection.db.collection('tickets').find({}).toArray();
+  return tickets.reduce((acc, t) => {
+    if (!acc[t.serie]) acc[t.serie] = [];
+    acc[t.serie].push(t);
+    return acc;
+  }, {});
+};
 
 app.get('/api/tickets', async (req, res) => {
   try {
-    const tickets = await mongoose.connection.db.collection('tickets').find({}).toArray();
-    // Transformamos la lista plana de 1501 tickets al formato por series
-    const agrupados = tickets.reduce((acc, t) => {
-      if (!acc[t.serie]) acc[t.serie] = [];
-      acc[t.serie].push(t);
-      return acc;
-    }, {});
+    const agrupados = await getBoletosAgrupados();
     res.json(agrupados);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-app.get('/api/tickets', (req, res) => {
-  res.redirect('/api/tickets');
+// Duplicamos la ruta para que el frontend no falle si busca 'boletos'
+app.get('/api/boletos', async (req, res) => {
+  try {
+    const agrupados = await getBoletosAgrupados();
+    res.json(agrupados);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 const PORT = process.env.PORT || 3000;
