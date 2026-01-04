@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 
 async function actualizar() {
     try {
-        const path = './data/boletos.json';
+        const path = './data/tickets.json';
         const data = await fs.readJson(path);
         
         const ventasK = {

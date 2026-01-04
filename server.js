@@ -1,45 +1,38 @@
 import express from 'express';
-import fs from 'fs-extra';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+dotenv.config();
 const app = express();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 app.use(express.json());
 app.use(express.static('public'));
 
-const DATA_PATH = './data/boletos.json';
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('✅ Conectado a MongoDB Atlas (Base de datos: test)'))
+  .catch(err => console.error('❌ Error de conexión:', err));
 
-// Obtener todos los boletos
-app.get('/api/boletos', async (req, res) => {
-    const data = await fs.readJson(DATA_PATH);
-    res.json(data);
+app.get('/api/tickets', async (req, res) => {
+  try {
+    const tickets = await mongoose.connection.db.collection('tickets').find({}).toArray();
+    // Transformamos la lista plana de 1501 tickets al formato por series
+    const agrupados = tickets.reduce((acc, t) => {
+      if (!acc[t.serie]) acc[t.serie] = [];
+      acc[t.serie].push(t);
+      return acc;
+    }, {});
+    res.json(agrupados);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-// Comprar/Apartar boleto
-app.post('/api/comprar', async (req, res) => {
-    const { serie, numero, nombre, telefono } = req.body;
-    const data = await fs.readJson(DATA_PATH);
-    const idx = data[serie].findIndex(b => b.numero == numero);
-    if (data[serie][idx].estado === 'disponible') {
-        data[serie][idx] = { ...data[serie][idx], estado: 'vendido', nombre_completo: nombre, telefono: telefono };
-        await fs.writeJson(DATA_PATH, data, { spaces: 2 });
-        res.json({ success: true });
-    } else {
-        res.status(400).send("Ya ocupado");
-    }
+app.get('/api/tickets', (req, res) => {
+  res.redirect('/api/tickets');
 });
 
-// ACTUALIZAR BOLETO DESDE ADMIN (Corregir o Liberar)
-app.post('/api/admin/update', async (req, res) => {
-    const { password, serie, numero, nuevoNombre, nuevoEstado } = req.body;
-    if (password !== "Lael2025") return res.status(401).send("No autorizado");
-    
-    const data = await fs.readJson(DATA_PATH);
-    const idx = data[serie].findIndex(b => b.numero == numero);
-    
-    data[serie][idx].nombre_completo = nuevoNombre;
-    data[serie][idx].estado = nuevoEstado; // 'vendido' o 'disponible'
-    
-    await fs.writeJson(DATA_PATH, data, { spaces: 2 });
-    res.json({ success: true });
-});
-
-app.listen(3000, () => console.log("🚀 Servidor Rifa Lael Encendido"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🚀 Servidor Rifa Lael en puerto ${PORT}`));

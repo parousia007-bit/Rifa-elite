@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 
-const oldPath = '../restaurado/RifaBot/data/boletos.json';
-const newPath = './data/boletos.json';
+const oldPath = '../restaurado/RifaBot/data/tickets.json';
+const newPath = './data/tickets.json';
 
 async function migrar() {
     const oldData = await fs.readJson(oldPath);
@@ -11,7 +11,7 @@ async function migrar() {
     series.forEach(letra => {
         let fuente = letra === 'A' ? (oldData.A2 || oldData.A) : oldData[letra];
         
-        // Creamos la serie limpia de 79 boletos
+        // Creamos la serie limpia de 79 tickets
         newData[letra] = Array.from({ length: 79 }, (_, i) => {
             const num = i + 1;
             const boletoExistente = fuente ? fuente.find(b => b.numero === num) : null;
@@ -27,7 +27,7 @@ async function migrar() {
     });
 
     await fs.outputJson(newPath, newData, { spaces: 2 });
-    console.log("✅ Migración completa: 1501 boletos organizados (A-S)");
+    console.log("✅ Migración completa: 1501 tickets organizados (A-S)");
 }
 
 migrar();

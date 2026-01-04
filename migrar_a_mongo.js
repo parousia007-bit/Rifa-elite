@@ -16,7 +16,7 @@ async function migrar() {
     try {
         console.log("⏳ Conectando a MongoDB para migrar datos...");
         await mongoose.connect(process.env.MONGO_URI);
-        const localData = await fs.readJson('./data/boletos.json');
+        const localData = await fs.readJson('./data/tickets.json');
         let totalDocs = [];
 
         Object.keys(localData).forEach(serie => {
