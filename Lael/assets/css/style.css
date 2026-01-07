@@ -1,0 +1,12 @@
+body {
+  font-family: Georgia, serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem;
+  line-height: 1.7;
+  background: #fafafa;
+  color: #222;
+}
+h1, h2, h3 {
+  margin-top: 2.5rem;
+}

@@ -1,0 +1,2352 @@
+[
+  {
+    "_id": "6954978d8fed15d0cd0d69c2",
+    "serie": "A",
+    "numero": 1,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": "9614040659",
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69c3",
+    "serie": "A",
+    "numero": 2,
+    "estado": "vendido",
+    "nombre_completo": "Yuri alvarez",
+    "telefono": "9191409571",
+    "__v": 0,
+    "comprador": "Yuri alvarez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69c4",
+    "serie": "A",
+    "numero": 3,
+    "estado": "vendido",
+    "nombre_completo": "Maricarmen tello",
+    "telefono": "9616103816",
+    "__v": 0,
+    "comprador": "Maricarmen tello"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69c5",
+    "serie": "A",
+    "numero": 4,
+    "estado": "vendido",
+    "nombre_completo": "David trujillo",
+    "telefono": "9615603656",
+    "__v": 0,
+    "comprador": "David trujillo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69c6",
+    "serie": "A",
+    "numero": 5,
+    "estado": "vendido",
+    "nombre_completo": "Maybeth martinez",
+    "telefono": "9613693527",
+    "__v": 0,
+    "comprador": "Maybeth martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69c7",
+    "serie": "A",
+    "numero": 6,
+    "estado": "vendido",
+    "nombre_completo": "Michelle guillen molina",
+    "telefono": "9614040659",
+    "__v": 0,
+    "comprador": "Michelle guillen molina"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69c9",
+    "serie": "A",
+    "numero": 8,
+    "estado": "vendido",
+    "nombre_completo": "Maybeth martinez",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Maybeth martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69ca",
+    "serie": "A",
+    "numero": 9,
+    "estado": "vendido",
+    "nombre_completo": "Marta cristel mora gonzales",
+    "telefono": "9613693527",
+    "__v": 0,
+    "comprador": "Marta cristel mora gonzales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69cb",
+    "serie": "A",
+    "numero": 10,
+    "estado": "vendido",
+    "nombre_completo": "Arik guillen molina",
+    "telefono": "9614040659",
+    "__v": 0,
+    "comprador": "Arik guillen molina"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69cc",
+    "serie": "A",
+    "numero": 11,
+    "estado": "vendido",
+    "nombre_completo": "Luis arturo",
+    "telefono": "9631034552",
+    "__v": 0,
+    "comprador": "Luis arturo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69cd",
+    "serie": "A",
+    "numero": 12,
+    "estado": "vendido",
+    "nombre_completo": "Dalia molina perez",
+    "telefono": "9614040659",
+    "__v": 0,
+    "comprador": "Dalia molina perez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69cf",
+    "serie": "A",
+    "numero": 14,
+    "estado": "vendido",
+    "nombre_completo": "Fany lopez pacheco",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "Fany lopez pacheco"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d0",
+    "serie": "A",
+    "numero": 15,
+    "estado": "vendido",
+    "nombre_completo": "Maria saira sanchez santiago",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Maria saira sanchez santiago"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d1",
+    "serie": "A",
+    "numero": 16,
+    "estado": "vendido",
+    "nombre_completo": "Alejandro tello",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alejandro tello"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d2",
+    "serie": "A",
+    "numero": 17,
+    "estado": "vendido",
+    "nombre_completo": "Anabey guillen pacheco",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "Anabey guillen pacheco"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d3",
+    "serie": "A",
+    "numero": 18,
+    "estado": "vendido",
+    "nombre_completo": "Abraham eduardo goez espinoza",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Abraham eduardo goez espinoza"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d4",
+    "serie": "A",
+    "numero": 19,
+    "estado": "vendido",
+    "nombre_completo": "Gael rodriguez samayoa",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Gael rodriguez samayoa"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d6",
+    "serie": "A",
+    "numero": 21,
+    "estado": "vendido",
+    "nombre_completo": "Gabriel mazariegos",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Gabriel mazariegos"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d7",
+    "serie": "A",
+    "numero": 22,
+    "estado": "vendido",
+    "nombre_completo": "Elena vazquez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Elena vazquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d8",
+    "serie": "A",
+    "numero": 23,
+    "estado": "vendido",
+    "nombre_completo": "Leticia villanueva",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Leticia villanueva"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69d9",
+    "serie": "A",
+    "numero": 24,
+    "estado": "vendido",
+    "nombre_completo": "Eliut moises morales",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Eliut moises morales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69da",
+    "serie": "A",
+    "numero": 25,
+    "estado": "vendido",
+    "nombre_completo": "Kevin moises montes lugo",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "Kevin moises montes lugo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69dc",
+    "serie": "A",
+    "numero": 27,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69de",
+    "serie": "A",
+    "numero": 29,
+    "estado": "vendido",
+    "nombre_completo": "Maybeth martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Maybeth martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69e0",
+    "serie": "A",
+    "numero": 31,
+    "estado": "vendido",
+    "nombre_completo": "Maybeth martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Maybeth martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69e2",
+    "serie": "A",
+    "numero": 33,
+    "estado": "vendido",
+    "nombre_completo": "Lisbeth molina solis",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Lisbeth molina solis"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69e4",
+    "serie": "A",
+    "numero": 35,
+    "estado": "vendido",
+    "nombre_completo": "Arminda",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Arminda"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69e6",
+    "serie": "A",
+    "numero": 37,
+    "estado": "vendido",
+    "nombre_completo": "Yuli mandujano",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Yuli mandujano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69e7",
+    "serie": "A",
+    "numero": 38,
+    "estado": "vendido",
+    "nombre_completo": "Antonio martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Antonio martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69e9",
+    "serie": "A",
+    "numero": 40,
+    "estado": "vendido",
+    "nombre_completo": "Elena vazquez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Elena vazquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69ed",
+    "serie": "A",
+    "numero": 44,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69ef",
+    "serie": "A",
+    "numero": 46,
+    "estado": "vendido",
+    "nombre_completo": "Alexander samayoa salas",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alexander samayoa salas"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69f0",
+    "serie": "A",
+    "numero": 47,
+    "estado": "vendido",
+    "nombre_completo": "Yuli mandujano",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Yuli mandujano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69f2",
+    "serie": "A",
+    "numero": 49,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69f6",
+    "serie": "A",
+    "numero": 53,
+    "estado": "vendido",
+    "nombre_completo": "Lizveth molina solis",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Lizveth molina solis"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d69fa",
+    "serie": "A",
+    "numero": 57,
+    "estado": "vendido",
+    "nombre_completo": "Yuli mandujano",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Yuli mandujano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a03",
+    "serie": "A",
+    "numero": 66,
+    "estado": "vendido",
+    "nombre_completo": "Gloria mejia hernandez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Gloria mejia hernandez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a04",
+    "serie": "A",
+    "numero": 67,
+    "estado": "vendido",
+    "nombre_completo": "Yuli mandujano",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Yuli mandujano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a0d",
+    "serie": "A",
+    "numero": 76,
+    "estado": "vendido",
+    "nombre_completo": "Hector perez nango",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Hector perez nango"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a0e",
+    "serie": "A",
+    "numero": 77,
+    "estado": "vendido",
+    "nombre_completo": "Kevin M. montes lugo",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Kevin M. montes lugo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a11",
+    "serie": "B",
+    "numero": 1,
+    "estado": "vendido",
+    "nombre_completo": "Kevin moises morales luego",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Kevin moises morales luego"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a12",
+    "serie": "B",
+    "numero": 2,
+    "estado": "vendido",
+    "nombre_completo": "Alicia sanchez matias",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alicia sanchez matias"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a13",
+    "serie": "B",
+    "numero": 3,
+    "estado": "vendido",
+    "nombre_completo": "Isabel villatoro",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Isabel villatoro"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a15",
+    "serie": "B",
+    "numero": 5,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a16",
+    "serie": "B",
+    "numero": 6,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a17",
+    "serie": "B",
+    "numero": 7,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a18",
+    "serie": "B",
+    "numero": 8,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a19",
+    "serie": "B",
+    "numero": 9,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": "9612435315",
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a1a",
+    "serie": "B",
+    "numero": 10,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a1b",
+    "serie": "B",
+    "numero": 11,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a1c",
+    "serie": "B",
+    "numero": 12,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a1d",
+    "serie": "B",
+    "numero": 13,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a1e",
+    "serie": "B",
+    "numero": 14,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a1f",
+    "serie": "B",
+    "numero": 15,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a20",
+    "serie": "B",
+    "numero": 16,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a21",
+    "serie": "B",
+    "numero": 17,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a22",
+    "serie": "B",
+    "numero": 18,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a23",
+    "serie": "B",
+    "numero": 19,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a24",
+    "serie": "B",
+    "numero": 20,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a25",
+    "serie": "B",
+    "numero": 21,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": "9614040659",
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a26",
+    "serie": "B",
+    "numero": 22,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a27",
+    "serie": "B",
+    "numero": 23,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a28",
+    "serie": "B",
+    "numero": 24,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a29",
+    "serie": "B",
+    "numero": 25,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a2a",
+    "serie": "B",
+    "numero": 26,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a2b",
+    "serie": "B",
+    "numero": 27,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a2c",
+    "serie": "B",
+    "numero": 28,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a2d",
+    "serie": "B",
+    "numero": 29,
+    "estado": "vendido",
+    "nombre_completo": "Sebastian Martinez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sebastian Martinez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a31",
+    "serie": "B",
+    "numero": 33,
+    "estado": "vendido",
+    "nombre_completo": "Sara villatoro",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sara villatoro"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a33",
+    "serie": "B",
+    "numero": 35,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a35",
+    "serie": "B",
+    "numero": 37,
+    "estado": "vendido",
+    "nombre_completo": "Hector perez nango",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Hector perez nango"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a42",
+    "serie": "B",
+    "numero": 50,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a4a",
+    "serie": "B",
+    "numero": 58,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a4e",
+    "serie": "B",
+    "numero": 62,
+    "estado": "vendido",
+    "nombre_completo": "Yuli mandujano",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Yuli mandujano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a53",
+    "serie": "B",
+    "numero": 67,
+    "estado": "vendido",
+    "nombre_completo": "Aylen guadalupe espinoza chanon",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Aylen guadalupe espinoza chanon"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a56",
+    "serie": "B",
+    "numero": 70,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a57",
+    "serie": "B",
+    "numero": 71,
+    "estado": "vendido",
+    "nombre_completo": "Eliut moises morales vazquez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Eliut moises morales vazquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a5d",
+    "serie": "B",
+    "numero": 77,
+    "estado": "vendido",
+    "nombre_completo": "Sara villatoro",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sara villatoro"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a62",
+    "serie": "C",
+    "numero": 3,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a65",
+    "serie": "C",
+    "numero": 6,
+    "estado": "vendido",
+    "nombre_completo": "Ceci garcia",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Ceci garcia"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a66",
+    "serie": "C",
+    "numero": 7,
+    "estado": "vendido",
+    "nombre_completo": "Eliut moises morales vazquez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Eliut moises morales vazquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a67",
+    "serie": "C",
+    "numero": 8,
+    "estado": "vendido",
+    "nombre_completo": "Sofia gualupe espinoza",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Sofia gualupe espinoza"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a6a",
+    "serie": "C",
+    "numero": 11,
+    "estado": "vendido",
+    "nombre_completo": "Alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a6c",
+    "serie": "C",
+    "numero": 13,
+    "estado": "vendido",
+    "nombre_completo": "jaris gomez cruz",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "jaris gomez cruz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a6d",
+    "serie": "C",
+    "numero": 14,
+    "estado": "vendido",
+    "nombre_completo": "Eliut moises morales",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Eliut moises morales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a6e",
+    "serie": "C",
+    "numero": 15,
+    "estado": "vendido",
+    "nombre_completo": "ceci garcia",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "ceci garcia"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a6f",
+    "serie": "C",
+    "numero": 16,
+    "estado": "vendido",
+    "nombre_completo": "mitzi de la cruz pineda",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "mitzi de la cruz pineda"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a70",
+    "serie": "C",
+    "numero": 17,
+    "estado": "vendido",
+    "nombre_completo": "alisson roblero",
+    "telefono": "9612799353",
+    "__v": 0,
+    "comprador": "alisson roblero"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a75",
+    "serie": "C",
+    "numero": 22,
+    "estado": "vendido",
+    "nombre_completo": "sofia elizabeth flores",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "sofia elizabeth flores"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a76",
+    "serie": "C",
+    "numero": 23,
+    "estado": "vendido",
+    "nombre_completo": "alissia sanchez matias",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "alissia sanchez matias"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a7b",
+    "serie": "C",
+    "numero": 28,
+    "estado": "vendido",
+    "nombre_completo": "alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a7c",
+    "serie": "C",
+    "numero": 29,
+    "estado": "vendido",
+    "nombre_completo": "hector perez nango",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "hector perez nango"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a7d",
+    "serie": "C",
+    "numero": 30,
+    "estado": "vendido",
+    "nombre_completo": "eliut morales vazquez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "eliut morales vazquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a86",
+    "serie": "C",
+    "numero": 39,
+    "estado": "vendido",
+    "nombre_completo": "alisson roblero perez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "alisson roblero perez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a8c",
+    "serie": "C",
+    "numero": 45,
+    "estado": "vendido",
+    "nombre_completo": "mariana leon",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "mariana leon"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a91",
+    "serie": "C",
+    "numero": 50,
+    "estado": "vendido",
+    "nombre_completo": "eliut morales vazquez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "eliut morales vazquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a9a",
+    "serie": "C",
+    "numero": 59,
+    "estado": "vendido",
+    "nombre_completo": "sandra luz roblero",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "sandra luz roblero"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a9d",
+    "serie": "C",
+    "numero": 62,
+    "estado": "vendido",
+    "nombre_completo": "alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6a9f",
+    "serie": "C",
+    "numero": 64,
+    "estado": "vendido",
+    "nombre_completo": "diana valeria reyes santiz",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "diana valeria reyes santiz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aac",
+    "serie": "C",
+    "numero": 77,
+    "estado": "vendido",
+    "nombre_completo": "mitzi de la cruz",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "mitzi de la cruz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aad",
+    "serie": "C",
+    "numero": 78,
+    "estado": "vendido",
+    "nombre_completo": "alisson roblero zunun",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "alisson roblero zunun"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aaf",
+    "serie": "D",
+    "numero": 1,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab0",
+    "serie": "D",
+    "numero": 2,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab1",
+    "serie": "D",
+    "numero": 3,
+    "estado": "vendido",
+    "nombre_completo": "Claudia Kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Claudia Kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab2",
+    "serie": "D",
+    "numero": 4,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab3",
+    "serie": "D",
+    "numero": 5,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab4",
+    "serie": "D",
+    "numero": 6,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab5",
+    "serie": "D",
+    "numero": 7,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab6",
+    "serie": "D",
+    "numero": 8,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab7",
+    "serie": "D",
+    "numero": 9,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab8",
+    "serie": "D",
+    "numero": 10,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ab9",
+    "serie": "D",
+    "numero": 11,
+    "estado": "vendido",
+    "nombre_completo": "Héctor Iván Hernández",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Héctor Iván Hernández"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aba",
+    "serie": "D",
+    "numero": 12,
+    "estado": "vendido",
+    "nombre_completo": "Adna Laparra",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adna Laparra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6abb",
+    "serie": "D",
+    "numero": 13,
+    "estado": "vendido",
+    "nombre_completo": "Rosario Kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Rosario Kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6abc",
+    "serie": "D",
+    "numero": 14,
+    "estado": "vendido",
+    "nombre_completo": "Lupita Kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Lupita Kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6abd",
+    "serie": "D",
+    "numero": 15,
+    "estado": "vendido",
+    "nombre_completo": "Claudia Rodríguez kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Claudia Rodríguez kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6abe",
+    "serie": "D",
+    "numero": 16,
+    "estado": "vendido",
+    "nombre_completo": "Miranda Mayorga",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Miranda Mayorga"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6abf",
+    "serie": "D",
+    "numero": 17,
+    "estado": "vendido",
+    "nombre_completo": "Claudia zoer Kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Claudia zoer Kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac0",
+    "serie": "D",
+    "numero": 18,
+    "estado": "vendido",
+    "nombre_completo": "Rebeca Ruiz Getsemani",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Rebeca Ruiz Getsemani"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac1",
+    "serie": "D",
+    "numero": 19,
+    "estado": "vendido",
+    "nombre_completo": "Carolina DCN",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Carolina DCN"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac2",
+    "serie": "D",
+    "numero": 20,
+    "estado": "vendido",
+    "nombre_completo": "Francisco Velazco",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Francisco Velazco"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac3",
+    "serie": "D",
+    "numero": 21,
+    "estado": "vendido",
+    "nombre_completo": "Paty canales",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Paty canales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac4",
+    "serie": "D",
+    "numero": 22,
+    "estado": "vendido",
+    "nombre_completo": "Alix Diaz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Alix Diaz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac5",
+    "serie": "D",
+    "numero": 23,
+    "estado": "vendido",
+    "nombre_completo": "Eithan Daniel Jiménez",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Eithan Daniel Jiménez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac6",
+    "serie": "D",
+    "numero": 24,
+    "estado": "vendido",
+    "nombre_completo": "Keily Bravo",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Keily Bravo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac7",
+    "serie": "D",
+    "numero": 25,
+    "estado": "vendido",
+    "nombre_completo": "César Pérez brindis",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "César Pérez brindis"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac8",
+    "serie": "D",
+    "numero": 26,
+    "estado": "vendido",
+    "nombre_completo": "Anita Méndez kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Anita Méndez kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ac9",
+    "serie": "D",
+    "numero": 27,
+    "estado": "vendido",
+    "nombre_completo": "Iris García",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Iris García"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aca",
+    "serie": "D",
+    "numero": 28,
+    "estado": "vendido",
+    "nombre_completo": "Anita Méndez kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Anita Méndez kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6acb",
+    "serie": "D",
+    "numero": 29,
+    "estado": "vendido",
+    "nombre_completo": "Lupita kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Lupita kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6acc",
+    "serie": "D",
+    "numero": 30,
+    "estado": "vendido",
+    "nombre_completo": "Fernanda Hidalgo",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Fernanda Hidalgo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6acd",
+    "serie": "D",
+    "numero": 31,
+    "estado": "vendido",
+    "nombre_completo": "Ignacio Hernández",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Ignacio Hernández"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ace",
+    "serie": "D",
+    "numero": 32,
+    "estado": "vendido",
+    "nombre_completo": "César Pérez brindis",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "César Pérez brindis"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6acf",
+    "serie": "D",
+    "numero": 33,
+    "estado": "vendido",
+    "nombre_completo": "Ma angela cabrera",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Ma angela cabrera"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad0",
+    "serie": "D",
+    "numero": 34,
+    "estado": "vendido",
+    "nombre_completo": "Vicente Moguel",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Vicente Moguel"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad1",
+    "serie": "D",
+    "numero": 35,
+    "estado": "vendido",
+    "nombre_completo": "Mónica Núñez",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Mónica Núñez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad2",
+    "serie": "D",
+    "numero": 36,
+    "estado": "vendido",
+    "nombre_completo": "Claudia zoer kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Claudia zoer kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad3",
+    "serie": "D",
+    "numero": 37,
+    "estado": "vendido",
+    "nombre_completo": "Ramiro soberano",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Ramiro soberano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad4",
+    "serie": "D",
+    "numero": 38,
+    "estado": "vendido",
+    "nombre_completo": "Pablo Velazco",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Pablo Velazco"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad5",
+    "serie": "D",
+    "numero": 39,
+    "estado": "vendido",
+    "nombre_completo": "Francisco Hernández",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Francisco Hernández"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad6",
+    "serie": "D",
+    "numero": 40,
+    "estado": "vendido",
+    "nombre_completo": "Adriana Elizabeth",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adriana Elizabeth"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad7",
+    "serie": "D",
+    "numero": 41,
+    "estado": "vendido",
+    "nombre_completo": "Arturo Lazos",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Arturo Lazos"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad8",
+    "serie": "D",
+    "numero": 42,
+    "estado": "vendido",
+    "nombre_completo": "Dianey Argüello",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Dianey Argüello"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ad9",
+    "serie": "D",
+    "numero": 43,
+    "estado": "vendido",
+    "nombre_completo": "Jesús Alejandro Aquino de la cruz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Jesús Alejandro Aquino de la cruz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ada",
+    "serie": "D",
+    "numero": 44,
+    "estado": "vendido",
+    "nombre_completo": "José Hernández",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "José Hernández"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6adb",
+    "serie": "D",
+    "numero": 45,
+    "estado": "vendido",
+    "nombre_completo": "Eduardo González",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Eduardo González"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6adc",
+    "serie": "D",
+    "numero": 46,
+    "estado": "vendido",
+    "nombre_completo": "Fany Román",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Fany Román"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6add",
+    "serie": "D",
+    "numero": 47,
+    "estado": "vendido",
+    "nombre_completo": "Gio farrera",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Gio farrera"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ade",
+    "serie": "D",
+    "numero": 48,
+    "estado": "vendido",
+    "nombre_completo": "Carolina Cáceres",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Carolina Cáceres"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6adf",
+    "serie": "D",
+    "numero": 49,
+    "estado": "vendido",
+    "nombre_completo": "Luis Vázquez",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Luis Vázquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae0",
+    "serie": "D",
+    "numero": 50,
+    "estado": "vendido",
+    "nombre_completo": "Mario Argüelles",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Mario Argüelles"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae1",
+    "serie": "D",
+    "numero": 51,
+    "estado": "vendido",
+    "nombre_completo": "Miriam Lievano",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Miriam Lievano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae2",
+    "serie": "D",
+    "numero": 52,
+    "estado": "vendido",
+    "nombre_completo": "Sofía Mendoza",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Sofía Mendoza"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae3",
+    "serie": "D",
+    "numero": 53,
+    "estado": "vendido",
+    "nombre_completo": "Roberto zoma",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Roberto zoma"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae4",
+    "serie": "D",
+    "numero": 54,
+    "estado": "vendido",
+    "nombre_completo": "Erika Castañeda",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Erika Castañeda"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae5",
+    "serie": "D",
+    "numero": 55,
+    "estado": "vendido",
+    "nombre_completo": "Kary 77 Mty",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Kary 77 Mty"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae6",
+    "serie": "D",
+    "numero": 56,
+    "estado": "vendido",
+    "nombre_completo": "Gildardo González",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Gildardo González"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae7",
+    "serie": "D",
+    "numero": 57,
+    "estado": "vendido",
+    "nombre_completo": "Claudia Vázquez",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Claudia Vázquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae8",
+    "serie": "D",
+    "numero": 58,
+    "estado": "vendido",
+    "nombre_completo": "Agustín Alcudia",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Agustín Alcudia"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ae9",
+    "serie": "D",
+    "numero": 59,
+    "estado": "vendido",
+    "nombre_completo": "Francisco Hernández",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Francisco Hernández"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aea",
+    "serie": "D",
+    "numero": 60,
+    "estado": "vendido",
+    "nombre_completo": "Mario Argüelles",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Mario Argüelles"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aeb",
+    "serie": "D",
+    "numero": 61,
+    "estado": "vendido",
+    "nombre_completo": "Nancy Gutiérrez",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Nancy Gutiérrez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aec",
+    "serie": "D",
+    "numero": 62,
+    "estado": "vendido",
+    "nombre_completo": "Yaremi García",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Yaremi García"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aed",
+    "serie": "D",
+    "numero": 63,
+    "estado": "vendido",
+    "nombre_completo": "Anita Méndez kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Anita Méndez kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aee",
+    "serie": "D",
+    "numero": 64,
+    "estado": "vendido",
+    "nombre_completo": "Adriana Gómez Espinoza",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Adriana Gómez Espinoza"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6aef",
+    "serie": "D",
+    "numero": 65,
+    "estado": "vendido",
+    "nombre_completo": "Concepción Gutiérrez",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Concepción Gutiérrez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af0",
+    "serie": "D",
+    "numero": 66,
+    "estado": "vendido",
+    "nombre_completo": "Lupita Cáceres",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Lupita Cáceres"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af1",
+    "serie": "D",
+    "numero": 67,
+    "estado": "vendido",
+    "nombre_completo": "Gabriela Camacho",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Gabriela Camacho"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af2",
+    "serie": "D",
+    "numero": 68,
+    "estado": "vendido",
+    "nombre_completo": "Javier Omar reyes",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Javier Omar reyes"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af3",
+    "serie": "D",
+    "numero": 69,
+    "estado": "vendido",
+    "nombre_completo": "Miriam Lievano",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Miriam Lievano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af4",
+    "serie": "D",
+    "numero": 70,
+    "estado": "vendido",
+    "nombre_completo": "Claudia Gordillo",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Claudia Gordillo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af5",
+    "serie": "D",
+    "numero": 71,
+    "estado": "vendido",
+    "nombre_completo": "Ramiro soberano",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Ramiro soberano"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af6",
+    "serie": "D",
+    "numero": 72,
+    "estado": "vendido",
+    "nombre_completo": "Anita Méndez kumatz",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Anita Méndez kumatz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af7",
+    "serie": "D",
+    "numero": 73,
+    "estado": "vendido",
+    "nombre_completo": "Agustín Alcudia",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Agustín Alcudia"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af8",
+    "serie": "D",
+    "numero": 74,
+    "estado": "vendido",
+    "nombre_completo": "Paty Mayorga",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Paty Mayorga"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6af9",
+    "serie": "D",
+    "numero": 75,
+    "estado": "vendido",
+    "nombre_completo": "Yaremi García",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Yaremi García"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6afa",
+    "serie": "D",
+    "numero": 76,
+    "estado": "vendido",
+    "nombre_completo": "Evan Mendoza",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Evan Mendoza"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6afb",
+    "serie": "D",
+    "numero": 77,
+    "estado": "vendido",
+    "nombre_completo": "José Maria Cardenas",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "José Maria Cardenas"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6afc",
+    "serie": "D",
+    "numero": 78,
+    "estado": "vendido",
+    "nombre_completo": "Inge polo",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "Inge polo"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6afd",
+    "serie": "D",
+    "numero": 79,
+    "estado": "vendido",
+    "nombre_completo": "José Hernández",
+    "telefono": "9611914140",
+    "__v": 0,
+    "comprador": "José Hernández"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bae",
+    "serie": "G",
+    "numero": 19,
+    "estado": "vendido",
+    "nombre_completo": "veronica jazmin cruz",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "veronica jazmin cruz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bb2",
+    "serie": "G",
+    "numero": 23,
+    "estado": "vendido",
+    "nombre_completo": "jose daniel perez borrallas",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "jose daniel perez borrallas"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bbe",
+    "serie": "G",
+    "numero": 35,
+    "estado": "vendido",
+    "nombre_completo": "jose daniel perez borrallas",
+    "telefono": "9611197933",
+    "__v": 0,
+    "comprador": "jose daniel perez borrallas"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bbf",
+    "serie": "G",
+    "numero": 36,
+    "estado": "vendido",
+    "nombre_completo": "jesus vazquez de paz",
+    "telefono": "9611197933",
+    "__v": 0,
+    "comprador": "jesus vazquez de paz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bc0",
+    "serie": "G",
+    "numero": 37,
+    "estado": "vendido",
+    "nombre_completo": "jesus vazquez de paz",
+    "telefono": "9611197933",
+    "__v": 0,
+    "comprador": "jesus vazquez de paz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bc1",
+    "serie": "G",
+    "numero": 38,
+    "estado": "vendido",
+    "nombre_completo": "jesus vazquez de paz",
+    "telefono": "9611197933",
+    "__v": 0,
+    "comprador": "jesus vazquez de paz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bc2",
+    "serie": "G",
+    "numero": 39,
+    "estado": "vendido",
+    "nombre_completo": "jesus vazquez de paz",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "jesus vazquez de paz"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bda",
+    "serie": "G",
+    "numero": 63,
+    "estado": "vendido",
+    "nombre_completo": "martha jazmin jandete",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "martha jazmin jandete"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bef",
+    "serie": "H",
+    "numero": 5,
+    "estado": "vendido",
+    "nombre_completo": "Melani carolina montero",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Melani carolina montero"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bf1",
+    "serie": "H",
+    "numero": 7,
+    "estado": "vendido",
+    "nombre_completo": "karla nicole montero",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "karla nicole montero"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bf2",
+    "serie": "H",
+    "numero": 8,
+    "estado": "vendido",
+    "nombre_completo": "Martha jazmin jandete",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Martha jazmin jandete"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bf3",
+    "serie": "H",
+    "numero": 9,
+    "estado": "vendido",
+    "nombre_completo": "dulce",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "dulce"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6bf9",
+    "serie": "H",
+    "numero": 15,
+    "estado": "vendido",
+    "nombre_completo": "joaquina moralez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "joaquina moralez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c01",
+    "serie": "H",
+    "numero": 23,
+    "estado": "vendido",
+    "nombre_completo": "karla nallely aguilar",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "karla nallely aguilar"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c25",
+    "serie": "H",
+    "numero": 59,
+    "estado": "vendido",
+    "nombre_completo": "zaya roblero",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "zaya roblero"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c2f",
+    "serie": "H",
+    "numero": 69,
+    "estado": "vendido",
+    "nombre_completo": "isabel ramirez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "isabel ramirez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c31",
+    "serie": "H",
+    "numero": 71,
+    "estado": "vendido",
+    "nombre_completo": "cesar alfonzo jimez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "cesar alfonzo jimez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c36",
+    "serie": "H",
+    "numero": 76,
+    "estado": "vendido",
+    "nombre_completo": "isabel ramirez",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "isabel ramirez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c39",
+    "serie": "H",
+    "numero": 79,
+    "estado": "vendido",
+    "nombre_completo": "alejandro roblero",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "alejandro roblero"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c3c",
+    "serie": "I",
+    "numero": 3,
+    "estado": "vendido",
+    "nombre_completo": "valeria josabet gallegos",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "valeria josabet gallegos"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c40",
+    "serie": "I",
+    "numero": 7,
+    "estado": "vendido",
+    "nombre_completo": "eduardo benjamin",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "eduardo benjamin"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c58",
+    "serie": "I",
+    "numero": 31,
+    "estado": "vendido",
+    "nombre_completo": "Alya Ramirez",
+    "telefono": "9612815955",
+    "__v": 0,
+    "comprador": "Alya Ramirez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c5f",
+    "serie": "I",
+    "numero": 38,
+    "estado": "vendido",
+    "nombre_completo": "Angel Humberto Barrientos",
+    "telefono": "9612815955",
+    "__v": 0,
+    "comprador": "Angel Humberto Barrientos"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c61",
+    "serie": "I",
+    "numero": 40,
+    "estado": "vendido",
+    "nombre_completo": "Brenda Vasquez Grajales",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Brenda Vasquez Grajales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c62",
+    "serie": "I",
+    "numero": 41,
+    "estado": "vendido",
+    "nombre_completo": "Dalia Ramirez Vasquez",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Dalia Ramirez Vasquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c63",
+    "serie": "I",
+    "numero": 42,
+    "estado": "vendido",
+    "nombre_completo": "Brenda Vasquez Grajales",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Brenda Vasquez Grajales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c64",
+    "serie": "I",
+    "numero": 43,
+    "estado": "vendido",
+    "nombre_completo": "Dalia Ramirez Vasquez",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Dalia Ramirez Vasquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c65",
+    "serie": "I",
+    "numero": 44,
+    "estado": "vendido",
+    "nombre_completo": "Brenda Vasquez Grajales",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Brenda Vasquez Grajales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c66",
+    "serie": "I",
+    "numero": 45,
+    "estado": "vendido",
+    "nombre_completo": "Dalia Ramirez Vasquez",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Dalia Ramirez Vasquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c67",
+    "serie": "I",
+    "numero": 46,
+    "estado": "vendido",
+    "nombre_completo": "Brenda Vasquez Grajales",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Brenda Vasquez Grajales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c68",
+    "serie": "I",
+    "numero": 47,
+    "estado": "vendido",
+    "nombre_completo": "Dalia Ramirez Vasquez",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Dalia Ramirez Vasquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c69",
+    "serie": "I",
+    "numero": 48,
+    "estado": "vendido",
+    "nombre_completo": "Brenda Vasquez Grajales",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Brenda Vasquez Grajales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c6a",
+    "serie": "I",
+    "numero": 49,
+    "estado": "vendido",
+    "nombre_completo": "Dalia Ramirez Vasquez",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Dalia Ramirez Vasquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c6b",
+    "serie": "I",
+    "numero": 50,
+    "estado": "vendido",
+    "nombre_completo": "Brenda Vasquez Grajales",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Brenda Vasquez Grajales"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c6c",
+    "serie": "I",
+    "numero": 51,
+    "estado": "vendido",
+    "nombre_completo": "Dalia Ramirez Vasquez",
+    "telefono": "9611164647",
+    "__v": 0,
+    "comprador": "Dalia Ramirez Vasquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c98",
+    "serie": "J",
+    "numero": 16,
+    "estado": "vendido",
+    "nombre_completo": "Yissela Belen Gordillo Villatoro",
+    "telefono": "9631338305",
+    "__v": 0,
+    "comprador": "Yissela Belen Gordillo Villatoro"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6c9b",
+    "serie": "J",
+    "numero": 19,
+    "estado": "vendido",
+    "nombre_completo": "Adán Gordillo Carbajal",
+    "telefono": "9612164037",
+    "__v": 0,
+    "comprador": "Adán Gordillo Carbajal"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6ccd",
+    "serie": "J",
+    "numero": 69,
+    "estado": "vendido",
+    "nombre_completo": "Silvia Aranda",
+    "telefono": "9612815155",
+    "__v": 0,
+    "comprador": "Silvia Aranda"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6cce",
+    "serie": "J",
+    "numero": 70,
+    "estado": "vendido",
+    "nombre_completo": "Profe chusito",
+    "telefono": "9612815955",
+    "__v": 0,
+    "comprador": "Profe chusito"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6cd1",
+    "serie": "J",
+    "numero": 73,
+    "estado": "vendido",
+    "nombre_completo": "Alya Dayani Ramirez Vasquez",
+    "telefono": "9612815955",
+    "__v": 0,
+    "comprador": "Alya Dayani Ramirez Vasquez"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6cd2",
+    "serie": "J",
+    "numero": 74,
+    "estado": "vendido",
+    "nombre_completo": "Angel Humberto Barrientos",
+    "telefono": "9612815955",
+    "__v": 0,
+    "comprador": "Angel Humberto Barrientos"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6cd5",
+    "serie": "J",
+    "numero": 77,
+    "estado": "vendido",
+    "nombre_completo": "Eliza Bistrain",
+    "telefono": "9612815955",
+    "__v": 0,
+    "comprador": "Eliza Bistrain"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6cd6",
+    "serie": "J",
+    "numero": 78,
+    "estado": "vendido",
+    "nombre_completo": "Josué - Brenda V",
+    "telefono": "9612815955",
+    "__v": 0,
+    "comprador": "Josué - Brenda V"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d08",
+    "serie": "K",
+    "numero": 49,
+    "estado": "vendido",
+    "nombre_completo": "Maestra Nelly",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Maestra Nelly"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d09",
+    "serie": "K",
+    "numero": 50,
+    "estado": "vendido",
+    "nombre_completo": "MTRA Alondra",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "MTRA Alondra"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d0a",
+    "serie": "K",
+    "numero": 51,
+    "estado": "vendido",
+    "nombre_completo": "Maestra Nelly",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Maestra Nelly"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d0b",
+    "serie": "K",
+    "numero": 52,
+    "estado": "vendido",
+    "nombre_completo": "Mtra Nelly",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Mtra Nelly"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d0c",
+    "serie": "K",
+    "numero": 53,
+    "estado": "vendido",
+    "nombre_completo": "Mtro Brayan",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Mtro Brayan"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d0d",
+    "serie": "K",
+    "numero": 54,
+    "estado": "vendido",
+    "nombre_completo": "MTRA Nelly",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "MTRA Nelly"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d0e",
+    "serie": "K",
+    "numero": 55,
+    "estado": "vendido",
+    "nombre_completo": "Mtra Lupita",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Mtra Lupita"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d0f",
+    "serie": "K",
+    "numero": 56,
+    "estado": "vendido",
+    "nombre_completo": "Psico. Alfonso",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Psico. Alfonso"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d10",
+    "serie": "K",
+    "numero": 57,
+    "estado": "vendido",
+    "nombre_completo": "MTRA Deysi",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "MTRA Deysi"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d11",
+    "serie": "K",
+    "numero": 58,
+    "estado": "vendido",
+    "nombre_completo": "Mtra Karla",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Mtra Karla"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d12",
+    "serie": "K",
+    "numero": 59,
+    "estado": "vendido",
+    "nombre_completo": "MTRA Azucena",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "MTRA Azucena"
+  },
+  {
+    "_id": "6954978d8fed15d0cd0d6d13",
+    "serie": "K",
+    "numero": 60,
+    "estado": "vendido",
+    "nombre_completo": "Mtra Lupita",
+    "telefono": null,
+    "__v": 0,
+    "comprador": "Mtra Lupita"
+  }
+]
