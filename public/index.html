@@ -73,11 +73,21 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="glass p-8 rounded-[35px] border-orange-500/10">
                 <h3 class="text-lg font-black text-orange-500 uppercase">Fase 1: Reyes</h3>
+<div class="mt-4 mb-6 text-center"> 
+  <div class="inline-block px-10 py-3 border border-yellow-500 rounded-full bg-black" style="box-shadow: 0 0 25px rgba(255, 215, 0, 0.7); animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;"> 
+    <p class="text-xl font-black text-yellow-400 uppercase leading-none m-0" style="text-shadow: 0 0 10px rgba(255,215,0,0.5);"> 
+      🏆 Dalia Ramírez 
+    </p> 
+    <p class="text-xs text-gray-300 font-bold uppercase tracking-widest mt-1"> 
+      Ganadora Boleto I-41 
+    </p> 
+  </div> 
+</div>
                 <p class="text-xs text-gray-500 italic">Terreno 10x20m - San Fernando, Chiapas.</p>
                 <p class="text-sm font-bold mt-3">Sorteo: 06 de Enero</p>
             </div>
             <div class="glass p-8 rounded-[35px] border-white/5">
-                <h3 class="text-lg font-black text-white uppercase">Fase 2: Valentín</h3>
+                <h3 class="text-xl font-black uppercase" style="color: #ff1493; text-shadow: 0 0 15px rgba(255, 20, 147, 0.8); letter-spacing: 1px;">💘 Fase 2: Valentín</h3>
                 <p class="text-xs text-gray-500 italic">Terreno 10x20m - San Fernando, Chiapas.</p>
                 <p class="text-sm font-bold mt-3 text-gray-400">Sorteo: 14 de Febrero</p>
             </div>
@@ -98,7 +108,7 @@
     <section id="boletos" class="p-6 mt-16">
         <div class="flex flex-col items-center mb-8">
             <h2 class="text-3xl font-black italic uppercase mb-6 tracking-tighter">Elige tu número</h2>
-            <input id="search" oninput="buscarBoleto()" type="text" placeholder="Buscar mi nombre..." class="w-full max-w-md h-14 glass rounded-3xl px-6 outline-none focus:border-orange-500/50 text-sm">
+            <a href="https://temporada-cerezas.onrender.com/invitaciones/flayer_lael/muro.html" target="_blank" class="w-full max-w-md h-14 glass rounded-3xl flex items-center justify-center text-white font-bold text-lg hover:scale-105 transition-transform border border-white/20 shadow-lg no-underline" style="background: rgba(255,255,255,0.1);">🧱 Ver Muro de Héroes ❤️</a>
         </div>
 
         <div id="series-nav" class="flex gap-2 overflow-x-auto no-scrollbar mb-8 py-2 max-w-4xl mx-auto"></div>
@@ -130,7 +140,7 @@
         }
 
         function initCountdown() {
-            const target = new Date("Jan 6, 2026 00:00:00").getTime();
+            const target = new Date("Feb 14, 2026 20:30:00").getTime();
             setInterval(() => {
                 const now = new Date().getTime();
                 const diff = target - now;
@@ -212,3 +222,25 @@
     <script src="animations.js"></script>
 </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script>
+window.addEventListener('load', function() {
+  // Configuración de la explosión
+  var duration = 3 * 1000; // 3 segundos de fiesta
+  var animationEnd = Date.now() + duration;
+  var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+  function randomInRange(min, max) { return Math.random() * (max - min) + min; }
+
+  var interval = setInterval(function() {
+    var timeLeft = animationEnd - Date.now();
+    if (timeLeft <= 0) { return clearInterval(interval); }
+
+    var particleCount = 50 * (timeLeft / duration);
+    // Lanza desde dos puntos arriba para cubrir la pantalla
+    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#FFD700', '#FFFFFF', '#FF8C00'] }));
+    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#FFD700', '#FFFFFF', '#FF8C00'] }));
+  }, 250);
+});
+</script>
