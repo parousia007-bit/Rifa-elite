@@ -33,3 +33,9 @@
         opacity: 0;
     }
 }
+
+/* Ensure body is visible */
+body {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
