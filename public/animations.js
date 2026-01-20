@@ -35,16 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // VARIABLES GLOBALES (Necesarias para los onclick en el HTML)
-let bData = {};
-let sActiva = 'A';
-let selNum = null;
-const WA_NUM = "529983016050";
+// Las exponemos explícitamente al objeto window para evitar problemas de scope
+window.bData = {};
+window.sActiva = 'A';
+window.selNum = null;
+window.WA_NUM = "529983016050";
 
 async function init() {
     try {
-        const res = await fetch('/api/boletos');
+        // Corrección de la API Endpoint: /api/tickets
+        const res = await fetch('/api/tickets');
         if (!res.ok) throw new Error('Error al cargar boletos');
-        bData = await res.json();
+        window.bData = await res.json();
         renderSeries();
         renderTickets();
 
@@ -58,8 +60,14 @@ async function init() {
         }
 
         initCountdown();
+
+        // Remover clase hidden del body si existe, para asegurar visibilidad tras carga
+        document.body.classList.remove('hidden');
+
     } catch (e) {
         console.error("Error inicializando:", e);
+        // Asegurar visibilidad incluso si falla
+        document.body.classList.remove('hidden');
     }
 }
 
@@ -82,7 +90,8 @@ function initCountdown() {
     }, 1000);
 }
 
-function copyCard() {
+// Funciones globales expuestas a window
+window.copyCard = function() {
     navigator.clipboard.writeText("4152314526471894");
     alert("Tarjeta copiada.");
 }
@@ -90,13 +99,14 @@ function copyCard() {
 function renderSeries() {
     const nav = document.getElementById('series-nav');
     if(!nav) return;
-    nav.innerHTML = Object.keys(bData).map(s => `
-        <button onclick="changeSerie('${s}')" class="px-6 py-4 rounded-[20px] font-black transition-all ${sActiva==s?'bg-orange-600 text-white shadow-xl scale-105':'glass text-gray-600'}">${s}</button>
+    nav.innerHTML = Object.keys(window.bData).map(s => `
+        <button onclick="changeSerie('${s}')" class="px-6 py-4 rounded-[20px] font-black transition-all ${window.sActiva==s?'bg-orange-600 text-white shadow-xl scale-105':'glass text-gray-600'}">${s}</button>
     `).join('');
 }
 
-function changeSerie(s) {
-    sActiva = s;
+// Expuesta globalmente
+window.changeSerie = function(s) {
+    window.sActiva = s;
     renderSeries();
     renderTickets();
 }
@@ -105,34 +115,34 @@ function renderTickets() {
     const grid = document.getElementById('tickets-grid');
     if(!grid) return;
 
-    if(!bData[sActiva]) return;
+    if(!window.bData[window.sActiva]) return;
 
-    grid.innerHTML = bData[sActiva].map(b => {
+    grid.innerHTML = window.bData[window.sActiva].map(b => {
         const isV = b.estado === 'vendido';
         return `
         <div onclick="${isV ? '' : `abrirM(${b.numero})`}"
              class="h-24 rounded-[30px] flex flex-col items-center justify-center relative transition-all ${isV ? 'sold-card' : 'glass border-slate-200/50 hover:bg-white active:scale-95 cursor-pointer'}">
-            <span class="text-[8px] absolute top-2 opacity-30 font-bold tracking-widest text-slate-400">${sActiva}</span>
+            <span class="text-[8px] absolute top-2 opacity-30 font-bold tracking-widest text-slate-400">${window.sActiva}</span>
             <span class="text-2xl font-black ${isV ? 'ticket-num-soft' : 'text-slate-300'}">${b.numero}</span>
             ${isV ? `<span class="text-[7px] text-soft-orange truncate px-2 w-full text-center mt-1 uppercase">${b.nombre_completo || 'Vendido'}</span>` : ''}
         </div>`;
     }).join('');
 }
 
-function abrirM(n) {
-    selNum = n;
+window.abrirM = function(n) {
+    window.selNum = n;
     const targetEl = document.getElementById('modal-target');
     const modalEl = document.getElementById('modal');
-    if(targetEl) targetEl.innerText = `${sActiva}${n}`;
+    if(targetEl) targetEl.innerText = `${window.sActiva}${n}`;
     if(modalEl) modalEl.classList.remove('hidden');
 }
 
-function cerrarModal() {
+window.cerrarModal = function() {
     const modalEl = document.getElementById('modal');
     if(modalEl) modalEl.classList.add('hidden');
 }
 
-async function confirmarCompra() {
+window.confirmarCompra = async function() {
     const n = document.getElementById('form-nombre').value;
     const t = document.getElementById('form-tel').value;
     if(!n || !t) return alert("Llena tus datos.");
@@ -140,11 +150,11 @@ async function confirmarCompra() {
     try {
         const r = await fetch('/api/comprar', {
             method: 'POST', headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ serie: sActiva, numero: selNum, nombre: n, telefono: t })
+            body: JSON.stringify({ serie: window.sActiva, numero: window.selNum, nombre: n, telefono: t })
         });
         if(r.ok) {
-            const msg = encodeURIComponent(`Hola Selene, aparté el boleto ${sActiva}${selNum} para ayudar a Lael. Soy ${n}.`);
-            window.location.href = `https://wa.me/${WA_NUM}?text=${msg}`;
+            const msg = encodeURIComponent(`Hola Selene, aparté el boleto ${window.sActiva}${window.selNum} para ayudar a Lael. Soy ${n}.`);
+            window.location.href = `https://wa.me/${window.WA_NUM}?text=${msg}`;
         } else {
             alert('Error al apartar boleto. Inténtalo de nuevo.');
         }

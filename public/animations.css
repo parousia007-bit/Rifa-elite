@@ -34,8 +34,15 @@
     }
 }
 
-/* Ensure body is visible */
+/* Ensure body is visible by default */
 body {
     opacity: 1 !important;
     visibility: visible !important;
+    transition: opacity 0.5s ease;
+}
+
+/* Optional hidden class for progressive enhancement,
+   but defaults to visible if JS fails */
+body.hidden {
+    opacity: 0;
 }
