@@ -15,69 +15,169 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-        body { background: #050505; color: white; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); }
-        
-        /* ESTILO ELITE (Suave pero con textos vibrantes) */
-        .sold-card { 
-            background: #0a0a0a !important;
-            border: 1.5px solid rgba(255, 107, 0, 0.4) !important;
-            opacity: 1 !important;
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+        body {
+            background: #FDFBF7; /* Warm White / Peace */
+            color: #334155; /* Slate 700 */
+            font-family: 'Outfit', sans-serif;
         }
 
-        /* AJUSTE DE COLOR SOLICITADO */
-        .ticket-num-soft { 
-            color: #FFFFFF !important; 
-            text-shadow: 0 0 10px rgba(255,255,255,0.8) !important; 
+        /* Glassmorphism for Light Theme */
+        .glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
+        
+        .sold-card { 
+            background: #F1F5F9 !important; /* Slate 100 */
+            border: 1px solid #CBD5E1 !important; /* Slate 300 */
+            opacity: 0.8 !important;
+        }
+
+        .ticket-num-soft { 
+            color: #64748B !important; /* Slate 500 */
+            text-shadow: none !important;
+        }
+
         .text-soft-orange { 
-            color: #FF6B00 !important; 
-            font-weight: 900 !important; 
-            text-shadow: 0 0 5px #FF6B00, 0 0 15px #FF6B00 !important;
+            color: #EA580C !important; /* Orange 600 - darker for contrast on white */
+            font-weight: 800 !important;
+            text-shadow: none !important;
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .swiper-pagination-bullet { background: #FF6B00 !important; }
+        .swiper-pagination-bullet { background: #EA580C !important; }
         .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Typewriter Effect */
+        .typewriter-text {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .05em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: orange; } }
     </style>
     <link rel="stylesheet" href="animations.css">
 </head>
 <body class="pb-20">
 
     <section class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
-        <div class="mb-6 rounded-[45px] overflow-hidden swiper mySwiper w-full max-w-lg aspect-[4/5] glass border border-white/10 shadow-2xl">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/img/foto1.jpg"></div>
-                <div class="swiper-slide"><img src="/img/foto2.jpg"></div>
-                <div class="swiper-slide"><img src="/img/foto3.jpg"></div>
-                <div class="swiper-slide"><img src="/img/foto4.jpg"></div>
-                <div class="swiper-slide"><img src="/img/foto5.jpg"></div>
-                <div class="swiper-slide relative">
-                    <img src="/img/terreno1.jpg" style="display:block; width:100%;" onerror="this.src='https://via.placeholder.com/800x600/0a0a0a/FF6B00?text=Terreno+1'">
-                    <div class="absolute bottom-0 left-0 w-full bg-black/80 text-orange-500 text-[10px] p-3 font-bold uppercase text-center tracking-widest">Premio: Terreno en Chiapas</div>
-                </div>
-                <div class="swiper-slide relative">
-                    <img src="/img/terreno2.jpg" style="display:block; width:100%;" onerror="this.src='https://via.placeholder.com/800x600/0a0a0a/FF6B00?text=Terreno+2'">
-                    <div class="absolute bottom-0 left-0 w-full bg-black/80 text-orange-500 text-[10px] p-3 font-bold uppercase text-center tracking-widest">Ubicación San Fernando</div>
+        <!-- Hero Video Container -->
+        <div class="mb-8 rounded-[45px] overflow-hidden w-full max-w-md aspect-[9/16] relative shadow-2xl border border-white/20 bg-slate-900">
+            <video autoplay loop muted playsinline poster="/img/foto1.jpg" class="w-full h-full object-cover opacity-90">
+                <!-- Placeholder for the actual video file -->
+                <source src="/video/hero-lael.mp4" type="video/mp4">
+            </video>
+
+            <!-- Overlay & Typewriter Text -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent flex flex-col justify-end pb-12 px-6">
+                <div class="w-full">
+                    <p class="typewriter-text text-white font-bold text-lg italic drop-shadow-md border-r-4 border-orange-500 pr-1">
+                        Donde hay amor, hay vida...
+                    </p>
+                    <p class="text-white/80 text-sm mt-2 font-medium animate-pulse delay-1000">
+                        ...y donde hay ayuda, hay esperanza.
+                    </p>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
         
-        <h1 class="text-6xl font-black italic tracking-tighter text-orange-500 mb-2 uppercase">Rifa Lael</h1>
-        <p class="text-gray-400 max-w-md text-sm mb-8 italic">8 meses de vida, operado del corazón. Tu ayuda es su esperanza.<div class="mt-4 mb-2 text-center"><span class="bg-orange-500/20 text-orange-500 border border-orange-500/30 px-6 py-2 rounded-full font-black text-xl tracking-tighter italic shadow-lg shadow-orange-500/10">COSTO POR BOLETO: $100 MXN</span></div></p>
+        <h1 class="text-6xl font-black italic tracking-tighter text-orange-600 mb-2 uppercase">Rifa Lael</h1>
+        <p class="text-slate-500 max-w-md text-sm mb-8 italic">10 meses de vida, luchando cada día. Tu ayuda es su esperanza.<div class="mt-4 mb-2 text-center"><span class="bg-orange-500/10 text-orange-600 border border-orange-500/30 px-6 py-2 rounded-full font-black text-xl tracking-tighter italic shadow-lg shadow-orange-500/10">COSTO POR BOLETO: $100 MXN</span></div></p>
         
         <div class="flex gap-4 mb-10" id="countdown">
-            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="days" class="text-2xl font-black block text-orange-500">00</span><span class="text-[9px] text-gray-400 uppercase">Días</span></div>
-            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="hours" class="text-2xl font-black block text-orange-500">00</span><span class="text-[9px] text-gray-400 uppercase">Hrs</span></div>
-            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="mins" class="text-2xl font-black block text-orange-500">00</span><span class="text-[9px] text-gray-400 uppercase">Min</span></div>
+            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="days" class="text-2xl font-black block text-orange-600">00</span><span class="text-[9px] text-slate-400 uppercase">Días</span></div>
+            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="hours" class="text-2xl font-black block text-orange-600">00</span><span class="text-[9px] text-slate-400 uppercase">Hrs</span></div>
+            <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="mins" class="text-2xl font-black block text-orange-600">00</span><span class="text-[9px] text-slate-400 uppercase">Min</span></div>
         </div>
 
         <a href="#boletos" class="bg-orange-600 px-10 py-5 rounded-full font-black text-lg shadow-xl active:scale-95 transition-all uppercase tracking-tighter">Ver Boletos</a>
     </section>
 
+    <!-- Storytelling Section: La Doble Lucha -->
+    <section class="max-w-4xl mx-auto p-6 space-y-6">
+        <h2 class="text-3xl font-black text-center text-slate-800 uppercase tracking-tighter mb-4 italic">La Doble Lucha</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Medical Block -->
+            <div class="glass p-8 rounded-[35px] border-l-4 border-blue-400 bg-white/50 relative overflow-hidden shadow-lg">
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                </div>
+                <h3 class="text-xl font-black text-blue-500 mb-3 uppercase italic">El Guerrero Lael</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    A sus <span class="font-bold text-slate-800">10 meses de edad</span>, Lael enfrenta una cardiopatía congénita compleja.
+                    Su vida depende de cuidados especializados 24/7, incluyendo una
+                    <span class="font-bold text-blue-500 bg-blue-50 px-1 rounded">traqueostomía</span> para respirar y
+                    <span class="font-bold text-blue-500 bg-blue-50 px-1 rounded">sonda de gastrostomía</span> para alimentarse.
+                </p>
+            </div>
+
+            <!-- Urgency Block -->
+            <div class="glass p-8 rounded-[35px] border-l-4 border-red-500 bg-white/50 relative overflow-hidden shadow-lg">
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                </div>
+                <h3 class="text-xl font-black text-red-500 mb-3 uppercase italic">Urgencia Familiar</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    La situación escaló el <span class="font-bold text-slate-800">14 de enero</span>.
+                    El padre de Lael, sustento del hogar, sufrió un grave accidente resultando en
+                    <span class="font-bold text-red-500 bg-red-50 px-1 rounded">fracturas dobles</span>.
+                    Esta incapacidad laboral ha cortado el suministro de insumos médicos y leche especial.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Carousel -->
+    <section class="p-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-black text-center text-slate-800 uppercase tracking-tighter mb-6 italic">Camino de Héroes</h2>
+
+        <div class="rounded-[40px] overflow-hidden swiper myTimelineSwiper w-full aspect-[4/3] md:aspect-[21/9] shadow-2xl relative bg-slate-900 border border-slate-200">
+            <div class="swiper-wrapper">
+                <!-- Hito 1 -->
+                <div class="swiper-slide relative">
+                    <img src="/img/foto1.jpg" class="w-full h-full object-cover opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/30 text-center">
+                        <span class="bg-green-500 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg">HITO 1: CUMPLIDO</span>
+                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">Victoria de Reyes</h3>
+                        <p class="text-white font-bold mt-2 text-sm md:text-lg">06 de Enero: ¡Primer sorteo exitoso!</p>
+                    </div>
+                </div>
+                 <!-- Hito 2 -->
+                <div class="swiper-slide relative">
+                    <img src="/img/foto2.jpg" class="w-full h-full object-cover opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/30 text-center">
+                        <span class="bg-orange-500 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg animate-pulse">HITO 2: EL RETO</span>
+                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">La Doble Lucha</h3>
+                        <p class="text-white font-bold mt-2 text-sm md:text-lg">Cubriendo insumos médicos y apoyo familiar.</p>
+                    </div>
+                </div>
+                 <!-- Hito 3 -->
+                <div class="swiper-slide relative">
+                    <img src="/img/terreno1.jpg" class="w-full h-full object-cover opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/30 text-center">
+                        <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg">HITO 3: LA META</span>
+                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">Gran Final</h3>
+                        <p class="text-white font-bold mt-2 text-sm md:text-lg">14 de Febrero: Amor y Esperanza.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
     <section class="p-6 max-w-4xl mx-auto space-y-6">
-        <h2 class="text-2xl font-black italic border-l-4 border-orange-500 pl-4 uppercase">Grandes Premios</h2><p class="text-orange-500 font-bold text-xs mt-2 italic animate-pulse">¡UN SOLO BOLETO PARTICIPA EN LAS 2 RIFAS!</p>
+        <h2 class="text-2xl font-black italic border-l-4 border-orange-500 pl-4 uppercase text-slate-800">Grandes Premios</h2><p class="text-orange-600 font-bold text-xs mt-2 italic animate-pulse">¡UN SOLO BOLETO PARTICIPA EN LAS 2 RIFAS!</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="glass p-8 rounded-[35px] border-orange-500/10">
                 <h3 class="text-lg font-black text-orange-500 uppercase">Fase 1: Reyes</h3>
@@ -95,20 +195,20 @@
                 <p class="text-sm font-bold mt-3">Sorteo: 06 de Enero</p>
             </div>
             <div class="glass p-8 rounded-[35px] border-white/5">
-                <h3 class="text-xl font-black uppercase" style="color: #ff1493; text-shadow: 0 0 15px rgba(255, 20, 147, 0.8); letter-spacing: 1px;">💘 Fase 2: Valentín</h3>
-                <p class="text-xs text-gray-500 italic">Terreno 10x20m - San Fernando, Chiapas.</p>
-                <p class="text-sm font-bold mt-3 text-gray-400">Sorteo: 14 de Febrero</p>
+                <h3 class="text-xl font-black uppercase" style="color: #ff1493; text-shadow: 0 0 15px rgba(255, 20, 147, 0.4); letter-spacing: 1px;">💘 Fase 2: Valentín</h3>
+                <p class="text-xs text-slate-500 italic">Terreno 10x20m - San Fernando, Chiapas.</p>
+                <p class="text-sm font-bold mt-3 text-slate-400">Sorteo: 14 de Febrero</p>
             </div>
         </div>
     </section>
 
     <section class="p-6 max-w-lg mx-auto mt-8">
         <div class="glass p-8 rounded-[40px] border-blue-500/10 text-center">
-            <p class="text-white font-black italic text-2xl mb-1 tracking-tighter">BBVA</p>
-            <p class="text-gray-500 text-[10px] uppercase mb-4 tracking-widest">Tarjeta de Selene</p>
-            <div class="flex flex-col gap-4 items-center bg-white/5 p-6 rounded-3xl border border-white/5">
-                <span id="card-num" class="text-xl font-mono font-bold tracking-tighter text-white">4152 3145 2647 1894</span>
-                <button onclick="copyCard()" class="w-full bg-orange-500/10 text-orange-500 font-bold py-3 rounded-2xl border border-orange-500/20 uppercase text-xs">Copiar Número</button>
+            <p class="text-slate-800 font-black italic text-2xl mb-1 tracking-tighter">BBVA</p>
+            <p class="text-slate-500 text-[10px] uppercase mb-4 tracking-widest">Tarjeta de Selene</p>
+            <div class="flex flex-col gap-4 items-center bg-slate-100 p-6 rounded-3xl border border-slate-200">
+                <span id="card-num" class="text-xl font-mono font-bold tracking-tighter text-slate-800">4152 3145 2647 1894</span>
+                <button onclick="copyCard()" class="w-full bg-orange-100 text-orange-600 font-bold py-3 rounded-2xl border border-orange-200 uppercase text-xs hover:bg-orange-200 transition-colors">Copiar Número</button>
             </div>
         </div>
     </section>
@@ -123,14 +223,15 @@
         <div id="tickets-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 max-w-5xl mx-auto"></div>
     </section>
 
-    <div id="modal" class="fixed inset-0 bg-black/95 backdrop-blur-3xl hidden z-50 flex items-center justify-center p-6">
-        <div class="glass w-full max-w-sm rounded-[45px] p-10 border-orange-500/20">
-            <h2 class="text-xl font-black text-orange-500 mb-6 uppercase italic">Apartar Boleto</h2><p class="text-white font-bold text-center mb-4 italic text-sm opacity-80">Donativo por boleto: $100.00 MXN</p>
-            <div id="modal-target" class="text-center mb-8 py-4 bg-orange-600/5 rounded-2xl font-black text-4xl text-orange-500 border border-orange-500/10 tracking-tighter"></div>
-            <input id="form-nombre" type="text" placeholder="Nombre completo" class="w-full bg-white/5 border border-white/10 h-14 rounded-2xl px-4 mb-3 outline-none focus:border-orange-500">
-            <input id="form-tel" type="tel" placeholder="WhatsApp" class="w-full bg-white/5 border border-white/10 h-14 rounded-2xl px-4 mb-6 outline-none focus:border-orange-500">
-            <button onclick="confirmarCompra()" class="w-full bg-orange-600 h-16 rounded-3xl font-black text-lg shadow-xl active:scale-95 transition-all">CONFIRMAR</button>
-            <button onclick="cerrarModal()" class="w-full mt-6 text-gray-600 text-[10px] font-bold uppercase tracking-widest">Cerrar</button>
+    <div id="modal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden z-50 flex items-center justify-center p-6">
+        <div class="glass w-full max-w-sm rounded-[45px] p-10 border-white/40 shadow-2xl bg-white/90">
+            <h2 class="text-xl font-black text-orange-600 mb-6 uppercase italic text-center">Apartar Boleto</h2>
+            <p class="text-slate-500 font-bold text-center mb-4 italic text-sm">Donativo por boleto: $100.00 MXN</p>
+            <div id="modal-target" class="text-center mb-8 py-4 bg-orange-50 rounded-2xl font-black text-4xl text-orange-600 border border-orange-100 tracking-tighter"></div>
+            <input id="form-nombre" type="text" placeholder="Nombre completo" class="w-full bg-slate-50 border border-slate-200 h-14 rounded-2xl px-4 mb-3 outline-none focus:border-orange-500 focus:bg-white transition-colors text-slate-700 font-bold">
+            <input id="form-tel" type="tel" placeholder="WhatsApp" class="w-full bg-slate-50 border border-slate-200 h-14 rounded-2xl px-4 mb-6 outline-none focus:border-orange-500 focus:bg-white transition-colors text-slate-700 font-bold">
+            <button onclick="confirmarCompra()" class="w-full bg-orange-600 text-white h-16 rounded-3xl font-black text-lg shadow-xl active:scale-95 transition-all hover:bg-orange-700">CONFIRMAR</button>
+            <button onclick="cerrarModal()" class="w-full mt-6 text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:text-slate-600">Cerrar</button>
         </div>
     </div>
 
@@ -143,12 +244,21 @@
             const res = await fetch('/api/boletos');
             bData = await res.json();
             renderSeries(); renderTickets();
-            new Swiper(".mySwiper", { pagination: { el: ".swiper-pagination" }, autoplay: { delay: 4000 }, loop: true });
+
+            // Initialize Timeline Carousel
+            if(document.querySelector(".myTimelineSwiper")) {
+                new Swiper(".myTimelineSwiper", {
+                    pagination: { el: ".swiper-pagination", dynamicBullets: true },
+                    autoplay: { delay: 5000, disableOnInteraction: false },
+                    loop: true
+                });
+            }
+
             initCountdown();
         }
 
         function initCountdown() {
-            const target = new Date("Feb 14, 2026 20:30:00").getTime();
+            const target = new Date("Feb 14, 2025 20:30:00").getTime();
             setInterval(() => {
                 const now = new Date().getTime();
                 const diff = target - now;
@@ -177,9 +287,9 @@
                 const isV = b.estado === 'vendido';
                 return `
                 <div onclick="${isV ? '' : `abrirM(${b.numero})`}" 
-                     class="h-24 rounded-[30px] flex flex-col items-center justify-center relative transition-all ${isV ? 'sold-card' : 'glass border-white/5 active:scale-95'}">
-                    <span class="text-[8px] absolute top-2 opacity-20 font-bold tracking-widest">${sActiva}</span>
-                    <span class="text-2xl font-black ${isV ? 'ticket-num-soft' : 'text-white/40'}">${b.numero}</span>
+                     class="h-24 rounded-[30px] flex flex-col items-center justify-center relative transition-all ${isV ? 'sold-card' : 'glass border-slate-200/50 hover:bg-white active:scale-95'}">
+                    <span class="text-[8px] absolute top-2 opacity-30 font-bold tracking-widest text-slate-400">${sActiva}</span>
+                    <span class="text-2xl font-black ${isV ? 'ticket-num-soft' : 'text-slate-300'}">${b.numero}</span>
                     ${isV ? `<span class="text-[7px] text-soft-orange truncate px-2 w-full text-center mt-1 uppercase">${b.nombre_completo || 'Vendido'}</span>` : ''}
                 </div>`;
             }).join('');
@@ -228,6 +338,13 @@
         init();
     </script>
     <script src="animations.js"></script>
+
+    <!-- Sticky CTA Mobile -->
+    <div class="fixed bottom-4 left-4 right-4 z-40 md:hidden">
+        <a href="#boletos" class="glass block w-full bg-orange-600/90 backdrop-blur-md text-white font-black text-center py-4 rounded-full shadow-2xl border border-orange-400/50 uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+            ❤️ Comprar Boleto
+        </a>
+    </div>
 </body>
 </html>
 
