@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(createElement, 600);
 
     // ---------------------------------------------------------
-    // 2. LÓGICA DE FASE 2 (Tickets, Carrusel, Modal)
+    // 2. LÓGICA DE FASE 2
     // ---------------------------------------------------------
     init();
 });
@@ -39,6 +39,12 @@ window.bData = {};
 window.sActiva = 'A';
 window.selNum = null;
 window.WA_NUM = "529983016050";
+
+// GALLERY DATA
+const GALLERIES = {
+    'reyes': ['/img/foto1.jpg', '/img/foto5.jpg', '/img/foto3.jpg'],
+    'reto': ['/img/foto2.jpg', '/img/foto4.jpg']
+};
 
 async function init() {
     try {
@@ -131,7 +137,7 @@ function setupHeroVideo() {
     }
 }
 
-// Funciones globales
+// Global functions
 window.copyCard = function() {
     navigator.clipboard.writeText("4152314526471894");
     alert("Tarjeta copiada.");
@@ -202,4 +208,23 @@ window.confirmarCompra = async function() {
         console.error(e);
         alert('Error de conexión.');
     }
+}
+
+// Gallery Logic
+window.openGallery = function(id) {
+    const modal = document.getElementById('gallery-modal');
+    const content = document.getElementById('gallery-content');
+    const images = GALLERIES[id] || [];
+
+    content.innerHTML = images.map(src => `
+        <div class="aspect-square rounded-xl overflow-hidden border border-white/20">
+            <img src="${src}" class="w-full h-full object-cover">
+        </div>
+    `).join('');
+
+    modal.classList.remove('hidden');
+}
+
+window.closeGallery = function() {
+    document.getElementById('gallery-modal').classList.add('hidden');
 }

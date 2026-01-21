@@ -89,7 +89,20 @@
         <h2 class="text-2xl font-black italic border-l-4 border-orange-accent pl-4 uppercase text-white">Grandes Premios</h2>
         <p class="text-orange-accent font-bold text-xs mt-2 italic animate-pulse">¡UN SOLO BOLETO PARTICIPA EN LAS 2 RIFAS!</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="glass p-8 rounded-[35px] border-orange-accent/10">
+            <!-- Fase 1: Reyes (Winner Badge) -->
+            <div class="glass p-8 rounded-[35px] border-orange-accent/10 relative overflow-hidden">
+                <!-- Badge SVG -->
+                <div class="curved-badge-container">
+                    <svg viewBox="0 0 100 100" width="100" height="100">
+                        <path id="curve" d="M 10 50 A 40 40 0 1 1 90 50" fill="transparent" />
+                        <text class="curved-text">
+                            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                                ★ ENTREGADO ★
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+
                 <h3 class="text-lg font-black text-orange-accent uppercase">Fase 1: Reyes</h3>
                 <div class="mt-4 mb-6 text-center">
                   <div class="inline-block px-10 py-3 border border-yellow-500 rounded-full bg-black winner-badge">
@@ -112,47 +125,72 @@
         </div>
     </section>
 
-    <!-- Aliados de Corazón Section (Correctly Placed) -->
+    <!-- Aliados de Corazón Section (Restructured) -->
     <section class="p-6 max-w-4xl mx-auto space-y-6">
         <h2 class="text-3xl font-black text-center text-white uppercase tracking-tighter mb-1 italic">Aliados de Corazón</h2>
         <p class="text-center text-gray-400 text-sm italic mb-6">Empresas, Periodistas y Creadores que amplifican nuestra voz</p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <!-- Card 1: Tech -->
-            <div class="glass p-6 rounded-[25px] border-l-4 border-cyan-400 flex flex-col items-center text-center hover:scale-105 transition-transform">
-                <div class="mb-3 text-cyan-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-cyan-400 hover:scale-105 transition-transform">
+                <div class="logo-contain flex items-center justify-center text-cyan-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
-                <h3 class="text-lg font-black text-white uppercase italic mb-1">RDS Soluciones</h3>
-                <p class="text-xs text-gray-400">Donación total de Plataforma Web, Diseño y Campaña Digital</p>
+                <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center">RDS Soluciones</h3>
+                <p class="text-[10px] text-gray-400 text-center leading-tight">Web & Campaña Digital</p>
             </div>
 
             <!-- Card 2: Business -->
-            <div class="glass p-6 rounded-[25px] border-l-4 border-green-400 flex flex-col items-center text-center hover:scale-105 transition-transform">
-                <div class="mb-3 text-green-400">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-green-400 hover:scale-105 transition-transform">
+                <div class="logo-contain flex items-center justify-center text-green-400">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
                 </div>
-                <h3 class="text-lg font-black text-white uppercase italic mb-1">Villa Montaña</h3>
-                <p class="text-xs text-gray-400">Donación de $5.00 MXN por cada consumo a la familia</p>
+                <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center">Villa Montaña</h3>
+                <p class="text-[10px] text-gray-400 text-center leading-tight">Donación x Consumo</p>
             </div>
 
             <!-- Card 3: Media -->
-            <div class="glass p-6 rounded-[25px] border-l-4 border-yellow-400 flex flex-col items-center text-center hover:scale-105 transition-transform">
-                <div class="mb-3 text-yellow-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-yellow-400 hover:scale-105 transition-transform">
+                <div class="logo-contain flex items-center justify-center text-yellow-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
                 </div>
-                <h3 class="text-lg font-black text-white uppercase italic mb-1">César Cancino Villar</h3>
-                <p class="text-xs text-gray-400">Agradecimiento especial por la cobertura periodística y difusión</p>
+                <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center">César Cancino</h3>
+                <p class="text-[10px] text-gray-400 text-center leading-tight">Cobertura Periodística</p>
             </div>
 
             <!-- Card 4: CTA -->
-            <a href="https://wa.me/529983016050" target="_blank" class="glass p-6 rounded-[25px] border-l-4 border-pink-500 flex flex-col items-center text-center bg-pink-500/10 hover:bg-pink-500/20 hover:scale-105 transition-all cursor-pointer no-underline">
-                <div class="mb-3 text-pink-500 animate-bounce">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+            <a href="https://wa.me/529983016050" target="_blank" class="glass aspect-square-card rounded-[25px] border-b-4 border-pink-500 bg-pink-500/10 hover:bg-pink-500/20 hover:scale-105 transition-all cursor-pointer no-underline">
+                <div class="logo-contain flex items-center justify-center text-pink-500 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                 </div>
-                <h3 class="text-lg font-black text-pink-500 uppercase italic mb-1">Súmate Aquí</h3>
-                <p class="text-xs text-gray-300">¿Eres empresa o influencer? Tu ayuda hace la diferencia</p>
+                <h3 class="text-sm font-black text-pink-500 uppercase italic mb-1 text-center">Súmate Aquí</h3>
+                <p class="text-[10px] text-gray-300 text-center leading-tight">Haz la diferencia</p>
             </a>
+        </div>
+    </section>
+
+    <!-- Mini-Rifas Solidarias (New Section) -->
+    <section class="p-6 max-w-4xl mx-auto space-y-6">
+        <h2 class="text-2xl font-black text-center text-white uppercase tracking-tighter mb-4 italic">Mini-Rifas Solidarias</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Mini Rifa 1 -->
+            <div class="mini-rifa-card">
+                <img src="/img/foto3.jpg" class="mini-rifa-img" alt="Premio Pizza">
+                <div class="mini-rifa-content text-center">
+                    <p class="text-xs text-orange-accent font-bold uppercase mb-1">Villa Montaña</p>
+                    <h3 class="text-sm font-black text-white mb-2">Combo Pizza</h3>
+                    <button class="bg-white/10 text-white text-[10px] px-4 py-2 rounded-full font-bold uppercase hover:bg-white/20 transition">Participar $20</button>
+                </div>
+            </div>
+             <!-- Mini Rifa 2 -->
+             <div class="mini-rifa-card">
+                <img src="/img/foto4.jpg" class="mini-rifa-img" alt="Premio Sorpresa">
+                <div class="mini-rifa-content text-center">
+                    <p class="text-xs text-orange-accent font-bold uppercase mb-1">Donación</p>
+                    <h3 class="text-sm font-black text-white mb-2">Kit Sorpresa</h3>
+                    <button class="bg-white/10 text-white text-[10px] px-4 py-2 rounded-full font-bold uppercase hover:bg-white/20 transition">Participar $10</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -169,6 +207,7 @@
                         <span class="bg-green-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg">HITO 1: CUMPLIDO</span>
                         <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">Victoria de Reyes</h3>
                         <p class="text-white font-bold mt-2 text-sm md:text-lg">06 de Enero: ¡Primer sorteo exitoso!</p>
+                        <button onclick="openGallery('reyes')" class="mt-4 bg-white/20 text-white px-6 py-2 rounded-full text-xs font-bold uppercase backdrop-blur-md hover:bg-white/30 transition">Ver Galería 📸</button>
                     </div>
                 </div>
                  <!-- Hito 2 -->
@@ -178,6 +217,7 @@
                         <span class="bg-orange-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg animate-pulse">HITO 2: EL RETO</span>
                         <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">La Doble Lucha</h3>
                         <p class="text-white font-bold mt-2 text-sm md:text-lg">Cubriendo insumos médicos y apoyo familiar.</p>
+                        <button onclick="openGallery('reto')" class="mt-4 bg-white/20 text-white px-6 py-2 rounded-full text-xs font-bold uppercase backdrop-blur-md hover:bg-white/30 transition">Ver Galería 📸</button>
                     </div>
                 </div>
                  <!-- Hito 3 -->
@@ -223,6 +263,18 @@
             <input id="form-tel" type="tel" placeholder="WhatsApp" class="w-full bg-white/5 border border-white/10 h-14 rounded-2xl px-4 mb-6 outline-none focus:border-orange-accent text-white">
             <button onclick="confirmarCompra()" class="w-full bg-orange-accent h-16 rounded-3xl font-black text-lg shadow-xl active:scale-95 transition-all text-white">CONFIRMAR</button>
             <button onclick="cerrarModal()" class="w-full mt-6 text-gray-500 text-[10px] font-bold uppercase tracking-widest hover:text-white">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black/95 backdrop-blur-3xl hidden z-50 flex items-center justify-center p-6" onclick="closeGallery()">
+        <div class="w-full max-w-3xl" onclick="event.stopPropagation()">
+            <div class="flex justify-end mb-4">
+                <button onclick="closeGallery()" class="text-white text-3xl font-bold">&times;</button>
+            </div>
+            <div id="gallery-content" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Images injected here -->
+            </div>
         </div>
     </div>
 
