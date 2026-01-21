@@ -39,11 +39,13 @@ window.bData = {};
 window.sActiva = 'A';
 window.selNum = null;
 window.WA_NUM = "529983016050";
+window.activeGalleryId = null; // Tracks current gallery context
 
 // GALLERY DATA
 const GALLERIES = {
     'reyes': ['/img/foto1.jpg', '/img/foto5.jpg', '/img/foto3.jpg'],
-    'reto': ['/img/foto2.jpg', '/img/foto4.jpg']
+    'reto': ['/img/foto2.jpg', '/img/foto4.jpg'],
+    'meta': ['/img/terreno1.jpg', '/img/terreno2.jpg']
 };
 
 async function init() {
@@ -55,12 +57,20 @@ async function init() {
         renderSeries();
         renderTickets();
 
-        // Initialize Timeline Carousel
+        // Initialize Timeline Carousel with Logic
         if(typeof Swiper !== 'undefined' && document.querySelector(".myTimelineSwiper")) {
-            new Swiper(".myTimelineSwiper", {
+            const swiper = new Swiper(".myTimelineSwiper", {
                 pagination: { el: ".swiper-pagination", dynamicBullets: true },
                 autoplay: { delay: 5000, disableOnInteraction: false },
-                loop: true
+                loop: true,
+                on: {
+                    init: function () {
+                        updateGalleryButton(this);
+                    },
+                    slideChange: function () {
+                        updateGalleryButton(this);
+                    }
+                }
             });
         }
 
@@ -72,6 +82,30 @@ async function init() {
     } catch (e) {
         console.error("Error inicializando:", e);
         document.body.classList.remove('hidden');
+    }
+}
+
+// Update Floating Button Visibility
+function updateGalleryButton(swiper) {
+    const btn = document.getElementById('floating-gallery-btn');
+    if (!btn) return;
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const galleryId = activeSlide.getAttribute('data-gallery');
+
+    if (galleryId && GALLERIES[galleryId]) {
+        window.activeGalleryId = galleryId;
+        btn.classList.add('visible');
+    } else {
+        window.activeGalleryId = null;
+        btn.classList.remove('visible');
+    }
+}
+
+// Open Active Gallery
+window.openActiveGallery = function() {
+    if (window.activeGalleryId) {
+        openGallery(window.activeGalleryId);
     }
 }
 
@@ -99,7 +133,6 @@ function setupHeroVideo() {
     const video = document.getElementById('hero-video');
 
     if (video) {
-        // Function to handle Enter Fullscreen
         const enterExperience = () => {
             if (video.requestFullscreen) {
                 video.requestFullscreen();
@@ -114,15 +147,13 @@ function setupHeroVideo() {
             video.play().catch(e => console.log("Play error:", e));
         };
 
-        // Click handler
         video.addEventListener('click', (e) => {
-            e.stopPropagation(); // Good practice
+            e.stopPropagation();
             if (!document.fullscreenElement && !document.webkitFullscreenElement) {
                 enterExperience();
             }
         });
 
-        // Handle Exit Fullscreen
         const handleExit = () => {
             if (!document.fullscreenElement && !document.webkitFullscreenElement) {
                 video.muted = true;
