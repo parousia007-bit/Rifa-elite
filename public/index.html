@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rifa Lael - Un Corazón Guerrero</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
 </head>
@@ -22,8 +23,8 @@
         <div class="hero-container">
             <div class="video-wrapper">
                 <video id="hero-video" class="hero-video" autoplay muted loop playsinline poster="/img/foto1.jpg">
-                    <!-- Placeholder vertical video -->
-                    <source src="https://cdn.coverr.co/videos/coverr-foggy-forest-road-2656/1080p.mp4" type="video/mp4">
+                    <!-- Real Video -->
+                    <source src="/video/hero-lael.mp4" type="video/mp4">
                     Tu navegador no soporta video HTML5.
                 </video>
                 <div class="video-overlay">
@@ -32,13 +33,13 @@
                 </div>
             </div>
         </div>
-        
-        <p class="text-gray-400 max-w-md text-sm mb-8 italic mt-6">8 meses de vida, operado del corazón. Tu ayuda es su esperanza.
+
+        <p class="text-gray-400 max-w-md text-sm mb-8 italic mt-6">10 meses de vida, luchando cada día. Tu ayuda es su esperanza.
             <div class="mt-4 mb-2 text-center">
                 <span class="bg-orange-accent/20 text-orange-accent border border-orange-accent/30 px-6 py-2 rounded-full font-black text-xl tracking-tighter italic shadow-lg shadow-orange-accent/10">COSTO POR BOLETO: $100 MXN</span>
             </div>
         </p>
-        
+
         <div class="flex gap-4 mb-10" id="countdown">
             <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="days" class="text-2xl font-black block text-orange-accent">00</span><span class="text-[9px] text-gray-400 uppercase">Días</span></div>
             <div class="glass p-4 rounded-3xl min-w-[70px]"><span id="hours" class="text-2xl font-black block text-orange-accent">00</span><span class="text-[9px] text-gray-400 uppercase">Hrs</span></div>
@@ -46,6 +47,79 @@
         </div>
 
         <a href="#boletos" class="bg-orange-accent px-10 py-5 rounded-full font-black text-lg shadow-xl active:scale-95 transition-all uppercase tracking-tighter text-white">Ver Boletos</a>
+    </section>
+
+    <!-- Storytelling Section: La Doble Lucha -->
+    <section class="max-w-4xl mx-auto p-6 space-y-6">
+        <h2 class="text-3xl font-black text-center text-white uppercase tracking-tighter mb-4 italic">La Doble Lucha</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Medical Block -->
+            <div class="glass p-8 rounded-[35px] border-l-4 border-blue-400 bg-white/5 relative overflow-hidden shadow-lg">
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                </div>
+                <h3 class="text-xl font-black text-blue-500 mb-3 uppercase italic">El Guerrero Lael</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A sus <span class="font-bold text-white">10 meses de edad</span>, Lael enfrenta una cardiopatía congénita compleja.
+                    Su vida depende de cuidados especializados 24/7, incluyendo una
+                    <span class="font-bold text-blue-400 bg-blue-900/30 px-1 rounded">traqueostomía</span> para respirar y
+                    <span class="font-bold text-blue-400 bg-blue-900/30 px-1 rounded">sonda de gastrostomía</span> para alimentarse.
+                </p>
+            </div>
+
+            <!-- Urgency Block -->
+            <div class="glass p-8 rounded-[35px] border-l-4 border-red-500 bg-white/5 relative overflow-hidden shadow-lg">
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                </div>
+                <h3 class="text-xl font-black text-red-500 mb-3 uppercase italic">Urgencia Familiar</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    La situación escaló el <span class="font-bold text-white">14 de enero</span>.
+                    El padre de Lael, sustento del hogar, sufrió un grave accidente resultando en
+                    <span class="font-bold text-red-400 bg-red-900/30 px-1 rounded">fracturas dobles</span>.
+                    Esta incapacidad laboral ha cortado el suministro de insumos médicos y leche especial.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Carousel -->
+    <section class="p-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-black text-center text-white uppercase tracking-tighter mb-6 italic">Camino de Héroes</h2>
+
+        <div class="rounded-[40px] overflow-hidden swiper myTimelineSwiper w-full aspect-[4/3] md:aspect-[21/9] shadow-2xl relative bg-black/50 border border-white/10">
+            <div class="swiper-wrapper">
+                <!-- Hito 1 -->
+                <div class="swiper-slide relative">
+                    <img src="/img/foto1.jpg" class="w-full h-full object-cover opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/60 text-center">
+                        <span class="bg-green-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg">HITO 1: CUMPLIDO</span>
+                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">Victoria de Reyes</h3>
+                        <p class="text-white font-bold mt-2 text-sm md:text-lg">06 de Enero: ¡Primer sorteo exitoso!</p>
+                    </div>
+                </div>
+                 <!-- Hito 2 -->
+                <div class="swiper-slide relative">
+                    <img src="/img/foto2.jpg" class="w-full h-full object-cover opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/60 text-center">
+                        <span class="bg-orange-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg animate-pulse">HITO 2: EL RETO</span>
+                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">La Doble Lucha</h3>
+                        <p class="text-white font-bold mt-2 text-sm md:text-lg">Cubriendo insumos médicos y apoyo familiar.</p>
+                    </div>
+                </div>
+                 <!-- Hito 3 -->
+                <div class="swiper-slide relative">
+                    <img src="/img/terreno1.jpg" class="w-full h-full object-cover opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/60 text-center">
+                        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg">HITO 3: LA META</span>
+                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">Gran Final</h3>
+                        <p class="text-white font-bold mt-2 text-sm md:text-lg">14 de Febrero: Amor y Esperanza.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
 
     <section class="p-6 max-w-4xl mx-auto space-y-6">
@@ -107,131 +181,31 @@
         </div>
     </div>
 
-    <!-- Business Logic -->
-    <script>
-        let bData = {}; let sActiva = 'A'; let selNum = null;
-        const WA_NUM = "529983016050";
-
-        async function init() {
-            try {
-                const res = await fetch('/api/boletos');
-                if (!res.ok) throw new Error("Error fetching boletos");
-                bData = await res.json();
-                renderSeries();
-                renderTickets();
-                initCountdown();
-            } catch (e) {
-                console.error(e);
-            }
-        }
-
-        function initCountdown() {
-            const target = new Date("Feb 14, 2026 20:30:00").getTime();
-            setInterval(() => {
-                const now = new Date().getTime();
-                const diff = target - now;
-                if (diff > 0) {
-                    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-                    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    if(document.getElementById('days')) document.getElementById('days').innerText = d.toString().padStart(2, '0');
-                    if(document.getElementById('hours')) document.getElementById('hours').innerText = h.toString().padStart(2, '0');
-                    if(document.getElementById('mins')) document.getElementById('mins').innerText = m.toString().padStart(2, '0');
-                }
-            }, 1000);
-        }
-
-        function copyCard() {
-            navigator.clipboard.writeText("4152314526471894");
-            alert("Tarjeta copiada.");
-        }
-
-        function renderSeries() {
-            const nav = document.getElementById('series-nav');
-            if(!nav) return;
-            nav.innerHTML = Object.keys(bData).map(s => `
-                <button onclick="changeSeries('${s}')" class="px-6 py-4 rounded-[20px] font-black transition-all ${sActiva==s?'bg-orange-accent text-white shadow-xl scale-105':'glass text-gray-600'}">${s}</button>
-            `).join('');
-        }
-
-        // Helper to switch series globally
-        window.changeSeries = function(s) {
-            sActiva = s;
-            renderSeries();
-            renderTickets();
-        }
-
-        function renderTickets() {
-            const grid = document.getElementById('tickets-grid');
-            if(!grid || !bData[sActiva]) return;
-            grid.innerHTML = bData[sActiva].map(b => {
-                const isV = b.estado === 'vendido';
-                return `
-                <div onclick="${isV ? '' : `abrirM(${b.numero})`}" 
-                     class="h-24 rounded-[30px] flex flex-col items-center justify-center relative transition-all ${isV ? 'sold-card' : 'glass border-white/5 active:scale-95 cursor-pointer'}">
-                    <span class="text-[8px] absolute top-2 opacity-20 font-bold tracking-widest text-white">${sActiva}</span>
-                    <span class="text-2xl font-black ${isV ? 'ticket-num-soft' : 'text-white/40'}">${b.numero}</span>
-                    ${isV ? `<span class="text-[7px] text-soft-orange truncate px-2 w-full text-center mt-1 uppercase">${b.nombre_completo || 'Vendido'}</span>` : ''}
-                </div>`;
-            }).join('');
-        }
-
-        function abrirM(n) {
-            selNum = n;
-            document.getElementById('modal-target').innerText = `${sActiva}${n}`;
-            document.getElementById('modal').classList.remove('hidden');
-        }
-
-        function cerrarModal() { document.getElementById('modal').classList.add('hidden'); }
-
-        async function confirmarCompra() {
-            const n = document.getElementById('form-nombre').value;
-            const t = document.getElementById('form-tel').value;
-            if(!n || !t) return alert("Llena tus datos.");
-
-            try {
-                const r = await fetch('/api/comprar', {
-                    method: 'POST', headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ serie: sActiva, numero: selNum, nombre: n, telefono: t })
-                });
-                if(r.ok) {
-                    const msg = encodeURIComponent(`Hola Selene, aparté el boleto ${sActiva}${selNum} para ayudar a Lael. Soy ${n}.`);
-                    window.location.href = `https://wa.me/${WA_NUM}?text=${msg}`;
-                } else {
-                    alert("Error al apartar boleto.");
-                }
-            } catch(e) {
-                alert("Error de conexión");
-            }
-        }
-
-        // Global attachments for inline handlers
-        window.copyCard = copyCard;
-        window.abrirM = abrirM;
-        window.cerrarModal = cerrarModal;
-        window.confirmarCompra = confirmarCompra;
-
-        init();
-    </script>
-
-    <!-- Animations and Interactions -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="animations.js"></script>
-    <script>
-        // Confetti Logic (kept separate or could be moved to animations.js)
-        window.addEventListener('load', function() {
-          var duration = 3 * 1000;
-          var animationEnd = Date.now() + duration;
-          var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
-          function randomInRange(min, max) { return Math.random() * (max - min) + min; }
-          var interval = setInterval(function() {
-            var timeLeft = animationEnd - Date.now();
-            if (timeLeft <= 0) { return clearInterval(interval); }
-            var particleCount = 50 * (timeLeft / duration);
-            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#FFD700', '#FFFFFF', '#FF8C00'] }));
-            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#FFD700', '#FFFFFF', '#FF8C00'] }));
-          }, 250);
-        });
-    </script>
+
+    <!-- Sticky CTA Mobile -->
+    <div class="fixed bottom-4 left-4 right-4 z-40 md:hidden">
+        <a href="#boletos" class="glass block w-full bg-orange-accent/90 backdrop-blur-md text-white font-black text-center py-4 rounded-full shadow-2xl border border-orange-accent/50 uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+            ❤️ Comprar Boleto
+        </a>
+    </div>
 </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script>
+window.addEventListener('load', function() {
+  var duration = 3 * 1000;
+  var animationEnd = Date.now() + duration;
+  var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+  function randomInRange(min, max) { return Math.random() * (max - min) + min; }
+  var interval = setInterval(function() {
+    var timeLeft = animationEnd - Date.now();
+    if (timeLeft <= 0) { return clearInterval(interval); }
+    var particleCount = 50 * (timeLeft / duration);
+    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#FFD700', '#FFFFFF', '#FF8C00'] }));
+    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#FFD700', '#FFFFFF', '#FF8C00'] }));
+  }, 250);
+});
+</script>

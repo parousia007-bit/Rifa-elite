@@ -2,7 +2,7 @@
 body {
     background-color: #0a0a0a;
     color: white;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin: 0;
     padding-bottom: 5rem; /* pb-20 equivalent */
 }
@@ -13,6 +13,7 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Scrollbar Hiding */
@@ -45,7 +46,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 32rem; /* max-w-lg */
-    aspect-ratio: 4/5; /* Mobile vertical proportion */
+    aspect-ratio: 9/16; /* TikTok Vertical */
     border-radius: 45px;
     overflow: hidden;
     /* Glass border effect for the wrapper itself */
@@ -68,9 +69,9 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%; /* Fade starts from bottom 50% */
+    height: 50%;
     background: linear-gradient(to top, rgba(10, 10, 10, 1), transparent);
-    pointer-events: none; /* Let clicks pass through to video */
+    pointer-events: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,3 +109,6 @@ body {
     box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
     animation: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* Swiper Dark Mode Adjustments */
+.swiper-pagination-bullet { background: #ff6600 !important; }
