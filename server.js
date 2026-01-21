@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
+import fs from 'fs'; // Added
 import { fileURLToPath } from 'url';
 import Boleto from './src/models/Boleto.js';
 import Venta from './src/models/Venta.js';
@@ -25,6 +26,19 @@ const getBoletosAgrupados = async () => {
     return acc;
   }, {});
 };
+
+// GALLERY API
+app.get('/api/gallery-images', (req, res) => {
+    const imgDir = path.join(__dirname, 'public', 'img');
+    fs.readdir(imgDir, (err, files) => {
+        if (err) {
+            return res.status(500).json({ error: 'Unable to scan directory' });
+        }
+        // Filter for images
+        const images = files.filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
+        res.json(images);
+    });
+});
 
 // SOPORTE PARA AMBAS RUTAS (Evita errores visuales)
 app.get('/api/tickets', async (req, res) => {

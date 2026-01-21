@@ -112,6 +112,7 @@ body {
 
 /* Swiper Dark Mode Adjustments */
 .swiper-pagination-bullet { background: #ff6600 !important; }
+.swiper-slide img { width: 100%; height: 100%; object-fit: cover; } /* Added dynamic rule */
 
 /* --- NEW STYLES FOR RESTRUCTURE --- */
 
@@ -125,35 +126,40 @@ body {
     padding: 1rem;
     height: 100%;
     position: relative;
+    overflow: hidden; /* Ensure image doesn't spill */
 }
 
-.logo-contain {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
-    margin-bottom: 0.5rem;
+/* When Logo is Loaded */
+.aspect-square-card.has-logo {
+    padding: 0;
+    border: none; /* Optional: remove border if total content */
 }
 
-/* Fallback logic: .fallback-icon hidden by default if img loads */
+.aspect-square-card.has-logo .fallback-icon,
+.aspect-square-card.has-logo h3,
+.aspect-square-card.has-logo p {
+    display: none !important;
+}
+
 .logo-img {
+    display: none; /* Hidden by default */
+}
+
+.aspect-square-card.has-logo .logo-img {
     display: block;
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
-    margin-bottom: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.logo-img.error {
-    display: none;
-}
-.logo-img.error + .fallback-icon {
-    display: block;
-}
+
+/* Fallback Icon Container */
 .fallback-icon {
-    display: none; /* Hidden by default if img is present, JS/CSS will toggle */
-}
-/* If no image tag, fallback icon is just a div/svg */
-.only-icon .fallback-icon {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -198,37 +204,28 @@ body {
     padding: 1rem;
 }
 
-/* Floating Gallery Button */
-.floating-gallery-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 50;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 0.5rem 1rem;
+/* FIXED GALLERY BUTTON (Bottom Right) */
+.fixed-gallery-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.8);
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    padding: 12px 24px;
     border-radius: 9999px;
-    font-weight: 800;
-    font-size: 0.75rem;
+    font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+    backdrop-filter: blur(5px);
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    display: none; /* Hidden by default, JS toggles */
 }
-.floating-gallery-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+.fixed-gallery-btn:hover {
+    background: #ff6600;
+    color: black;
+    box-shadow: 0 0 25px rgba(255, 102, 0, 0.6);
     transform: scale(1.05);
-}
-.floating-gallery-btn.visible {
-    display: block;
-    animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
 }

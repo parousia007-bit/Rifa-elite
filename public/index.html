@@ -22,10 +22,8 @@
         <!-- Hero Video Section -->
         <div class="hero-container">
             <div class="video-wrapper">
-                <video id="hero-video" class="hero-video" autoplay muted loop playsinline poster="/img/foto1.jpg">
-                    <!-- Real Video -->
-                    <source src="/video/hero-lael.mp4" type="video/mp4">
-                    Tu navegador no soporta video HTML5.
+                <video autoplay loop muted playsinline webkit-playsinline class="hero-video" id="hero-video">
+                    <source src="video/hero-lael.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay">
                     <h1 class="text-4xl font-black italic tracking-tighter text-orange-accent uppercase drop-shadow-md">Rifa Lael</h1>
@@ -91,7 +89,6 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Fase 1: Reyes (Winner Badge) -->
             <div class="glass p-8 rounded-[35px] border-orange-accent/10 relative overflow-hidden">
-                <!-- Badge SVG -->
                 <div class="curved-badge-container">
                     <svg viewBox="0 0 100 100" width="100" height="100">
                         <path id="curve" d="M 10 50 A 40 40 0 1 1 90 50" fill="transparent" />
@@ -125,47 +122,47 @@
         </div>
     </section>
 
-    <!-- Aliados de Corazón Section (Restructured) -->
+    <!-- Aliados de Corazón Section -->
     <section class="p-6 max-w-4xl mx-auto space-y-6">
         <h2 class="text-3xl font-black text-center text-white uppercase tracking-tighter mb-1 italic">Aliados de Corazón</h2>
         <p class="text-center text-gray-400 text-sm italic mb-6">Empresas, Periodistas y Creadores que amplifican nuestra voz</p>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <!-- Card 1: Tech (RDS) - Using Image Fallback Logic -->
+            <!-- Card 1: Tech (RDS) -->
             <div class="glass aspect-square-card rounded-[25px] border-b-4 border-cyan-400 hover:scale-105 transition-transform">
-                <img src="/img/logo-rds.png" onerror="this.classList.add('error')" class="logo-img" alt="RDS Logo">
-                <div class="fallback-icon flex items-center justify-center text-cyan-400 w-full h-full">
+                <img src="/img/logo-rds.png" onload="this.parentElement.classList.add('has-logo')" onerror="this.style.display='none'" class="logo-img" alt="RDS Logo">
+                <div class="fallback-icon flex flex-col items-center justify-center text-cyan-400 w-full h-full">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center mt-2">RDS Soluciones</h3>
+                    <p class="text-[10px] text-gray-400 text-center leading-tight">Web & Campaña Digital</p>
                 </div>
-                <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center">RDS Soluciones</h3>
-                <p class="text-[10px] text-gray-400 text-center leading-tight">Web & Campaña Digital</p>
             </div>
 
             <!-- Card 2: Business -->
-            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-green-400 hover:scale-105 transition-transform only-icon">
-                <div class="fallback-icon flex items-center justify-center text-green-400 w-full h-full">
+            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-green-400 hover:scale-105 transition-transform">
+                <div class="fallback-icon flex flex-col items-center justify-center text-green-400 w-full h-full">
                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+                     <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center mt-2">Villa Montaña</h3>
+                     <p class="text-[10px] text-gray-400 text-center leading-tight">Donación x Consumo</p>
                 </div>
-                <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center">Villa Montaña</h3>
-                <p class="text-[10px] text-gray-400 text-center leading-tight">Donación x Consumo</p>
             </div>
 
             <!-- Card 3: Media -->
-            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-yellow-400 hover:scale-105 transition-transform only-icon">
-                <div class="fallback-icon flex items-center justify-center text-yellow-400 w-full h-full">
+            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-yellow-400 hover:scale-105 transition-transform">
+                <div class="fallback-icon flex flex-col items-center justify-center text-yellow-400 w-full h-full">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                    <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center mt-2">César Cancino</h3>
+                    <p class="text-[10px] text-gray-400 text-center leading-tight">Cobertura Periodística</p>
                 </div>
-                <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center">César Cancino</h3>
-                <p class="text-[10px] text-gray-400 text-center leading-tight">Cobertura Periodística</p>
             </div>
 
             <!-- Card 4: CTA -->
-            <a href="https://wa.me/529983016050" target="_blank" class="glass aspect-square-card rounded-[25px] border-b-4 border-pink-500 bg-pink-500/10 hover:bg-pink-500/20 hover:scale-105 transition-all cursor-pointer no-underline only-icon">
-                <div class="fallback-icon flex items-center justify-center text-pink-500 animate-bounce w-full h-full">
+            <a href="https://wa.me/529983016050" target="_blank" class="glass aspect-square-card rounded-[25px] border-b-4 border-pink-500 bg-pink-500/10 hover:bg-pink-500/20 hover:scale-105 transition-all cursor-pointer no-underline">
+                <div class="fallback-icon flex flex-col items-center justify-center text-pink-500 animate-bounce w-full h-full">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    <h3 class="text-sm font-black text-pink-500 uppercase italic mb-1 text-center mt-2">Súmate Aquí</h3>
+                    <p class="text-[10px] text-gray-300 text-center leading-tight">Haz la diferencia</p>
                 </div>
-                <h3 class="text-sm font-black text-pink-500 uppercase italic mb-1 text-center">Súmate Aquí</h3>
-                <p class="text-[10px] text-gray-300 text-center leading-tight">Haz la diferencia</p>
             </a>
         </div>
     </section>
@@ -199,38 +196,9 @@
     <section class="p-6 max-w-4xl mx-auto relative group">
         <h2 class="text-3xl font-black text-center text-white uppercase tracking-tighter mb-6 italic">Camino de Héroes</h2>
 
-        <!-- Floating Gallery Button (Outside Swiper Wrapper) -->
-        <button id="floating-gallery-btn" class="floating-gallery-btn" onclick="openActiveGallery()">Ver Galería 📸</button>
-
         <div class="rounded-[40px] overflow-hidden swiper myTimelineSwiper w-full aspect-[4/3] md:aspect-[21/9] shadow-2xl relative bg-black/50 border border-white/10">
-            <div class="swiper-wrapper">
-                <!-- Hito 1 -->
-                <div class="swiper-slide relative" data-gallery="reyes">
-                    <img src="/img/foto1.jpg" class="w-full h-full object-cover opacity-50">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/60 text-center">
-                        <span class="bg-green-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg">HITO 1: CUMPLIDO</span>
-                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">Victoria de Reyes</h3>
-                        <p class="text-white font-bold mt-2 text-sm md:text-lg">06 de Enero: ¡Primer sorteo exitoso!</p>
-                    </div>
-                </div>
-                 <!-- Hito 2 -->
-                <div class="swiper-slide relative" data-gallery="reto">
-                    <img src="/img/foto2.jpg" class="w-full h-full object-cover opacity-50">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/60 text-center">
-                        <span class="bg-orange-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg animate-pulse">HITO 2: EL RETO</span>
-                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">La Doble Lucha</h3>
-                        <p class="text-white font-bold mt-2 text-sm md:text-lg">Cubriendo insumos médicos y apoyo familiar.</p>
-                    </div>
-                </div>
-                 <!-- Hito 3 -->
-                <div class="swiper-slide relative" data-gallery="meta">
-                    <img src="/img/terreno1.jpg" class="w-full h-full object-cover opacity-50">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/60 text-center">
-                        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-3 tracking-widest shadow-lg">HITO 3: LA META</span>
-                        <h3 class="text-3xl md:text-5xl font-black text-white italic uppercase drop-shadow-lg">Gran Final</h3>
-                        <p class="text-white font-bold mt-2 text-sm md:text-lg">14 de Febrero: Amor y Esperanza.</p>
-                    </div>
-                </div>
+            <div class="swiper-wrapper" id="carousel-wrapper">
+                <!-- Slides injected dynamically -->
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -256,6 +224,9 @@
         <div id="series-nav" class="flex gap-2 overflow-x-auto no-scrollbar mb-8 py-2 max-w-4xl mx-auto"></div>
         <div id="tickets-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 max-w-5xl mx-auto"></div>
     </section>
+
+    <!-- FIXED GALLERY BUTTON -->
+    <button id="fixed-gallery-trigger" class="fixed-gallery-btn" onclick="openGallery()">📸 Galería de Ganadores</button>
 
     <div id="modal" class="fixed inset-0 bg-black/95 backdrop-blur-3xl hidden z-50 flex items-center justify-center p-6">
         <div class="glass w-full max-w-sm rounded-[45px] p-10 border-orange-accent/20">
@@ -284,7 +255,7 @@
     <script src="animations.js"></script>
 
     <!-- Sticky CTA Mobile -->
-    <div class="fixed bottom-4 left-4 right-4 z-40 md:hidden">
+    <div class="fixed bottom-4 left-4 right-4 z-40 md:hidden" style="bottom: 80px;"> <!-- Raised to avoid covering gallery button -->
         <a href="#boletos" class="glass block w-full bg-orange-accent/90 backdrop-blur-md text-white font-black text-center py-4 rounded-full shadow-2xl border border-orange-accent/50 uppercase tracking-widest text-sm hover:scale-105 transition-transform">
             ❤️ Comprar Boleto
         </a>

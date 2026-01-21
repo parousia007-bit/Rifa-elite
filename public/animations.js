@@ -39,41 +39,21 @@ window.bData = {};
 window.sActiva = 'A';
 window.selNum = null;
 window.WA_NUM = "529983016050";
-window.activeGalleryId = null; // Tracks current gallery context
-
-// GALLERY DATA
-const GALLERIES = {
-    'reyes': ['/img/foto1.jpg', '/img/foto5.jpg', '/img/foto3.jpg'],
-    'reto': ['/img/foto2.jpg', '/img/foto4.jpg'],
-    'meta': ['/img/terreno1.jpg', '/img/terreno2.jpg']
-};
+window.GALLERY_IMAGES = [];
 
 async function init() {
     try {
-        // API Call
+        // 1. Fetch Ticket Data
         const res = await fetch('/api/boletos');
         if (!res.ok) throw new Error('Error al cargar boletos');
         window.bData = await res.json();
         renderSeries();
         renderTickets();
 
-        // Initialize Timeline Carousel with Logic
-        if(typeof Swiper !== 'undefined' && document.querySelector(".myTimelineSwiper")) {
-            const swiper = new Swiper(".myTimelineSwiper", {
-                pagination: { el: ".swiper-pagination", dynamicBullets: true },
-                autoplay: { delay: 5000, disableOnInteraction: false },
-                loop: true,
-                on: {
-                    init: function () {
-                        updateGalleryButton(this);
-                    },
-                    slideChange: function () {
-                        updateGalleryButton(this);
-                    }
-                }
-            });
-        }
+        // 2. Fetch Gallery Images for Carousel
+        await loadGalleryImages();
 
+        // 3. Init Other Components
         initCountdown();
         setupHeroVideo();
 
@@ -85,27 +65,49 @@ async function init() {
     }
 }
 
-// Update Floating Button Visibility
-function updateGalleryButton(swiper) {
-    const btn = document.getElementById('floating-gallery-btn');
-    if (!btn) return;
-
-    const activeSlide = swiper.slides[swiper.activeIndex];
-    const galleryId = activeSlide.getAttribute('data-gallery');
-
-    if (galleryId && GALLERIES[galleryId]) {
-        window.activeGalleryId = galleryId;
-        btn.classList.add('visible');
-    } else {
-        window.activeGalleryId = null;
-        btn.classList.remove('visible');
+async function loadGalleryImages() {
+    try {
+        const res = await fetch('/api/gallery-images');
+        if (res.ok) {
+            const files = await res.json();
+            // Prefix path
+            window.GALLERY_IMAGES = files.map(f => `/img/${f}`);
+            renderCarousel(window.GALLERY_IMAGES);
+        } else {
+            console.error("Failed to load gallery images");
+        }
+    } catch (e) {
+        console.error("Gallery fetch error:", e);
     }
 }
 
-// Open Active Gallery
-window.openActiveGallery = function() {
-    if (window.activeGalleryId) {
-        openGallery(window.activeGalleryId);
+function renderCarousel(images) {
+    const wrapper = document.getElementById('carousel-wrapper');
+    if (!wrapper) return;
+
+    // Define descriptive texts for known images to keep "Storytelling" aspect if possible,
+    // or just render clean images as requested ("Dinamismo... Escabilidad... object-fit: cover").
+    // The user said "No limites... map over folder... object-fit: cover".
+    // We will render simple slides for scalability.
+
+    wrapper.innerHTML = images.map((src, index) => `
+        <div class="swiper-slide relative">
+            <img src="${src}" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
+                <span class="text-white/80 text-xs font-bold uppercase tracking-widest">Galería Rifa Lael • Foto ${index + 1}</span>
+            </div>
+        </div>
+    `).join('');
+
+    // Initialize Swiper
+    if(typeof Swiper !== 'undefined' && document.querySelector(".myTimelineSwiper")) {
+        new Swiper(".myTimelineSwiper", {
+            pagination: { el: ".swiper-pagination", dynamicBullets: true },
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            loop: true,
+            effect: 'fade',
+            fadeEffect: { crossFade: true }
+        });
     }
 }
 
@@ -241,14 +243,16 @@ window.confirmarCompra = async function() {
     }
 }
 
-// Gallery Logic
-window.openGallery = function(id) {
+// Global Gallery Modal Logic
+window.openGallery = function() {
     const modal = document.getElementById('gallery-modal');
     const content = document.getElementById('gallery-content');
-    const images = GALLERIES[id] || [];
+
+    // Show all loaded images
+    const images = window.GALLERY_IMAGES;
 
     content.innerHTML = images.map(src => `
-        <div class="aspect-square rounded-xl overflow-hidden border border-white/20">
+        <div class="aspect-square rounded-xl overflow-hidden border border-white/20 hover:scale-105 transition-transform">
             <img src="${src}" class="w-full h-full object-cover">
         </div>
     `).join('');
