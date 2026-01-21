@@ -13,8 +13,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.json());
 app.use(express.static('public'));
 
-mongoose.connect(process.env.MONGO_URI, { dbName: 'test' })
-  .then(() => console.log('✅ Conectado a MongoDB Atlas (DB: test)'))
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('✅ Conectado a MongoDB Atlas'))
   .catch(err => console.error('❌ Error de conexión:', err));
 
 const getBoletosAgrupados = async () => {

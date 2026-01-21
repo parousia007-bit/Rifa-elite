@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Muro de Héroes - Lael</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Tono Cereza Suave y Atmosférico */
+            --bg-gradient: radial-gradient(circle at center top, #fce4ec 20%, #f8bbd0 60%, #f06292 100%);
+            --primary-cherry: #c2185b;
+            --glass-tint: rgba(255, 235, 240, 0.4); /* Tinte rosado para el cristal */
+            --neon-pop: #ff4081;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background: var(--bg-gradient);
+            font-family: 'Montserrat', sans-serif; /* Fuente base limpia */
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Separar gancho superior y tarjeta inferior */
+            align-items: center;
+        }
+
+        /* --- EL ESCENARIO (Donde flotan los globos) --- */
+        #hearts-stage {
+            position: absolute; inset: 0;
+            pointer-events: none;
+            z-index: 1; /* Detrás de los cristales */
+        }
+
+        /* --- GANCHO SUPERIOR (VITRINA) --- */
+        .vitrine-hook {
+            margin-top: 25px;
+            z-index: 20; /* Encima de todo */
+            text-decoration: none;
+
+            /* Glassmorfismo Superior */
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: flex; align-items: center; gap: 10px;
+            color: var(--primary-cherry);
+            font-weight: 600; font-size: 0.95rem;
+            box-shadow: 0 8px 32px rgba(194, 24, 91, 0.15);
+            transition: all 0.3s ease;
+            animation: floatHook 4s ease-in-out infinite;
+        }
+
+        .vitrine-hook b { font-weight: 800; color: #880e4f; }
+        .vitrine-hook:hover { transform: scale(1.05); background: rgba(255,255,255,0.4); }
+
+        @keyframes floatHook { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        /* --- TARJETA INFERIOR (GLASSMORFISMO EXTREMO) --- */
+        .bottom-glass-card {
+            position: relative; z-index: 10;
+            width: 100%; max-width: 600px;
+            padding: 3rem 2rem 2rem;
+            border-radius: 50px 50px 0 0;
+            text-align: center;
+
+            /* EL EFECTO CRISTAL POTENTE */
+            background: var(--glass-tint); /* Base tintada */
+            backdrop-filter: blur(30px) saturate(180%); /* Desenfoque alto + saturación para viveza */
+            -webkit-backdrop-filter: blur(30px) saturate(180%); /* Soporte Safari */
+
+            /* Bordes brillantes */
+            border-top: 2px solid rgba(255, 255, 255, 0.7);
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+            box-shadow: 0 -20px 60px rgba(194, 24, 91, 0.2); /* Sombra de color cereza */
+            animation: slideUp 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        /* Tipografía Festiva */
+        h1 {
+            font-family: 'Dancing Script', cursive; /* Fuente cursiva festiva */
+            color: var(--primary-cherry);
+            font-weight: 700; font-size: 3.5rem; line-height: 1;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+        }
+
+        /* Texto con gradiente de lujo */
+        .cherry-gold-text {
+            background: linear-gradient(45deg, #D81B60, #FFD700, #FF4081);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900; font-size: 1.3rem;
+            animation: shimmerText 5s linear infinite;
+        }
+        @keyframes shimmerText { to { background-position: 200% center; } }
+
+        p {
+            color: #880e4f; font-size: 1.1rem; line-height: 1.6;
+            margin-bottom: 2rem; font-weight: 500;
+        }
+
+        /* Botón Principal */
+        .btn-main {
+            display: inline-flex; align-items: center; gap: 10px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #880e4f, #c2185b);
+            color: white;
+            padding: 16px 40px; border-radius: 50px;
+            font-weight: 700; font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(194, 24, 91, 0.4);
+            transition: all 0.3s; letter-spacing: 1px;
+        }
+        .btn-main:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 35px rgba(194, 24, 91, 0.6); }
+
+        /* --- GLOBOS FLOTANTES (Física Mejorada) --- */
+        .heart-unit {
+            position: absolute; bottom: -180px;
+            display: flex; flex-direction: column; align-items: center;
+            pointer-events: auto; cursor: grab;
+            will-change: transform;
+            /* Importante: z-index bajo para que pasen DETRÁS del cristal */
+            z-index: 2;
+            transition: filter 0.2s;
+        }
+        .heart-unit:active { cursor: grabbing; }
+        .heart-unit:hover .heart-icon-svg { transform: scale(1.15); filter: brightness(1.2) drop-shadow(0 15px 25px rgba(255,64,129,0.4)); }
+
+        @keyframes floatSwayPremium {
+            0% { transform: translateY(0) rotate(0deg) scale(0.7); opacity: 0; }
+            15% { opacity: 1; transform: translateY(-15vh) rotate(8deg) scale(1); }
+            33% { transform: translateY(-35vh) rotate(-10deg) scale(1); }
+            50% { transform: translateY(-55vh) rotate(12deg) scale(1); }
+            66% { transform: translateY(-75vh) rotate(-8deg) scale(1); }
+            85% { opacity: 0.8; }
+            100% { transform: translateY(-120vh) rotate(0deg) scale(0.6); opacity: 0; }
+        }
+
+        /* Efectos de Explosión */
+        @keyframes popDramatico {
+            0% { transform: scale(1); filter: brightness(1.5); }
+            40% { transform: scale(1.5) rotate(15deg); }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+        .confetti-piece {
+            position: absolute; width: 10px; height: 10px;
+            border-radius: 40% 60% 50% 50% / 50% 40% 60% 50%; /* Forma orgánica */
+            pointer-events: none; z-index: 15;
+        }
+        @keyframes confettiBlast {
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+            100% { transform: translate(var(--tx), var(--ty)) scale(0.5) rotate(720deg); opacity: 0; }
+        }
+
+        .heart-icon-svg {
+            width: 100%; height: auto;
+            filter: drop-shadow(0 10px 20px rgba(194, 24, 91, 0.25)); /* Sombra de color */
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .hero-badge {
+            background: rgba(255,255,255,0.95); padding: 7px 15px; border-radius: 15px;
+            font-size: 0.9rem; font-weight: 700; color: var(--primary-cherry);
+            margin-top: -18px; white-space: nowrap;
+            box-shadow: 0 5px 15px rgba(194, 24, 91, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes slideUp { from { transform: translateY(100%) rotateX(20deg); opacity:0; } to { transform: translateY(0) rotateX(0); opacity:1; } }
+    </style>
+</head>
+<body>
+
+    <a href="../../index.html" class="vitrine-hook">
+        ✨ Explora más en la <b>Vitrina de Invitaciones</b>
+    </a>
+
+    <div id="hearts-stage"></div>
+
+    <div class="bottom-glass-card">
+        <h1>Muro de Héroes</h1>
+        <p>
+            Cada globo representa un corazón noble que apoya el sueño de <span class="cherry-gold-text">Lael</span>.
+            <br><small style="opacity: 0.7; display: block; margin-top: 10px;">(¡Toca los globos para celebrar! 🎉)</small>
+        </p>
+
+        <a href="index.html" class="btn-main">
+            Volver a la Invitación ↩
+        </a>
+    </div>
+
+    <script>
+        // Paleta de colores vibrantes "Cereza y Joyas"
+        const COLORS = [
+            { fill: '#e91e63', shadow: 'rgba(233, 30, 99, 0.5)' }, // Cereza Intenso
+            { fill: '#ff4081', shadow: 'rgba(255, 64, 129, 0.5)' }, // Rosa Neón
+            { fill: '#9c27b0', shadow: 'rgba(156, 39, 176, 0.5)' }, // Amatista
+            { fill: '#FFD700', shadow: 'rgba(255, 215, 0, 0.5)' },  // Oro Festivo
+            { fill: '#00bcd4', shadow: 'rgba(0, 188, 212, 0.5)' }   // Cian (Contraste refrescante)
+        ];
+
+        const HEART_PATH = "M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-11.8,16-21.2C32,3.8,28.2,0,23.6,0z";
+        let heroes = [];
+        const stage = document.getElementById('hearts-stage');
+
+        async function init() {
+            try {
+                const res = await fetch('heroes.json?v=' + Date.now());
+                heroes = await res.json();
+                startFlow();
+            } catch (e) {
+                heroes = Array(20).fill({nombre: "Héroe Anónimo"});
+                startFlow();
+            }
+        }
+
+        function spawnConfetti(x, y, color) {
+            for (let i = 0; i < 16; i++) { // Más confeti!
+                const confeti = document.createElement('div');
+                confeti.className = 'confetti-piece';
+                confeti.style.left = x + 'px'; confeti.style.top = y + 'px';
+                confeti.style.backgroundColor = color;
+
+                const angle = Math.random() * 360;
+                const velocity = Math.random() * 120 + 60; // Explosión más grande
+                confeti.style.setProperty('--tx', `${Math.cos(angle * Math.PI/180) * velocity}px`);
+                confeti.style.setProperty('--ty', `${Math.sin(angle * Math.PI/180) * velocity}px`);
+
+                confeti.style.animation = `confettiBlast ${Math.random()*0.5 + 0.5}s ease-out forwards`;
+                document.body.appendChild(confeti);
+                setTimeout(() => confeti.remove(), 1000);
+            }
+        }
+
+        function createHeart() {
+            if (!heroes.length) return;
+            const data = heroes[Math.floor(Math.random() * heroes.length)];
+            const theme = COLORS[Math.floor(Math.random() * COLORS.length)];
+            const unit = document.createElement('div');
+            unit.className = 'heart-unit';
+
+            // Tamaño y física mejorada
+            const size = Math.random() * 0.7 + 0.85;
+            unit.style.width = (65 * size) + 'px';
+
+            const duration = Math.random() * 10 + 12; // Más lento y majestuoso
+            unit.style.left = (Math.random() * 92 + 4) + '%';
+            unit.style.animation = `floatSwayPremium ${duration}s linear forwards`;
+
+            unit.innerHTML = `
+                <svg class="heart-icon-svg" viewBox="0 0 32 29.6" style="filter: drop-shadow(0 12px 20px ${theme.shadow})">
+                    <path d="${HEART_PATH}" fill="${theme.fill}"/>
+                </svg>
+                <div class="hero-badge" style="color: ${theme.fill}; border-color: ${theme.fill}44">
+                    ${data.nombre}
+                </div>
+            `;
+
+            // INTERACCIÓN MEJORADA: Vibración + Pop Dramático + Confeti
+            unit.addEventListener('pointerdown', (e) => { // pointerdown es más rápido en móviles
+                if (navigator.vibrate) navigator.vibrate([30, 50, 30]); // Patrón de vibración
+
+                const rect = unit.getBoundingClientRect();
+                spawnConfetti(rect.left + rect.width/2, rect.top + rect.height/2, theme.fill);
+
+                unit.style.animation = 'popDramatico 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards';
+                setTimeout(() => unit.remove(), 300);
+            });
+
+            stage.appendChild(unit);
+            setTimeout(() => { if(unit.parentNode) unit.remove(); }, duration * 1000);
+        }
+
+        function startFlow() {
+            for(let i=0; i<18; i++) setTimeout(createHeart, i * 250); // Ráfaga inicial más densa
+            setInterval(createHeart, 500); // Flujo constante
+        }
+
+        init();
+    </script>
+</body>
+</html>
