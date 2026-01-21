@@ -44,21 +44,21 @@ body {
 
 .video-wrapper {
     position: relative;
-    width: 100%;
-    max-width: 32rem; /* max-w-lg */
-    aspect-ratio: 9/16; /* TikTok Vertical */
-    border-radius: 45px;
+    width: 90%;
+    max-width: 550px;
+    aspect-ratio: 16 / 9; /* Horizontal */
+    border-radius: 20px;
     overflow: hidden;
     /* Glass border effect for the wrapper itself */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid #ff6600; /* Neon Border */
     background: #000;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
 }
 
 .hero-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Ensure full content visible */
     display: block;
     cursor: pointer;
 }
