@@ -229,3 +229,54 @@ body {
     box-shadow: 0 0 25px rgba(255, 102, 0, 0.6);
     transform: scale(1.05);
 }
+
+/* Estilo para Mini Rifas Inactivas */
+.mini-rifa-proximamente {
+    filter: grayscale(100%) brightness(0.5) blur(1px);
+    position: relative;
+    pointer-events: none; /* No se puede clickear */
+    user-select: none;
+}
+
+.mini-rifa-proximamente::after {
+    content: "PRÓXIMAMENTE";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    background: #ff6600;
+    color: white;
+    padding: 5px 15px;
+    font-weight: 900;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* Animación de titileo para el botón flotante */
+@keyframes blink-orange {
+    0%, 100% { transform:   scale(1); box-shadow: 0 0 20px rgba(255,102,0,0.4); }
+    50% { transform:   scale(1.1); box-shadow: 0 0 30px rgba(255,102,0,0.8); }
+}
+
+/* Estilo del nuevo mini-botón redondo */
+.mini-floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    /* La transformación se maneja en la animación */
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.8);
+    border: 2px solid #ff6600;
+    border-radius: 50%; /* Lo hace perfectamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    font-size: 24px; /* Tamaño del emoji */
+    animation: blink-orange 2s infinite ease-in-out; /* Aplica la animación */
+}
