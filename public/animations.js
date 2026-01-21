@@ -55,7 +55,7 @@ async function init() {
 
         // 3. Init Other Components
         initCountdown();
-        setupHeroVideo();
+        // Video logic is now handled by expandVideo() via onclick
 
         document.body.classList.remove('hidden');
 
@@ -70,11 +70,8 @@ async function loadGalleryImages() {
         const res = await fetch('/api/gallery-images');
         if (res.ok) {
             const files = await res.json();
-            // Prefix path
             window.GALLERY_IMAGES = files.map(f => `/img/${f}`);
             renderCarousel(window.GALLERY_IMAGES);
-        } else {
-            console.error("Failed to load gallery images");
         }
     } catch (e) {
         console.error("Gallery fetch error:", e);
@@ -85,11 +82,6 @@ function renderCarousel(images) {
     const wrapper = document.getElementById('carousel-wrapper');
     if (!wrapper) return;
 
-    // Define descriptive texts for known images to keep "Storytelling" aspect if possible,
-    // or just render clean images as requested ("Dinamismo... Escabilidad... object-fit: cover").
-    // The user said "No limites... map over folder... object-fit: cover".
-    // We will render simple slides for scalability.
-
     wrapper.innerHTML = images.map((src, index) => `
         <div class="swiper-slide relative">
             <img src="${src}" class="w-full h-full object-cover">
@@ -99,7 +91,6 @@ function renderCarousel(images) {
         </div>
     `).join('');
 
-    // Initialize Swiper
     if(typeof Swiper !== 'undefined' && document.querySelector(".myTimelineSwiper")) {
         new Swiper(".myTimelineSwiper", {
             pagination: { el: ".swiper-pagination", dynamicBullets: true },
@@ -112,7 +103,6 @@ function renderCarousel(images) {
 }
 
 function initCountdown() {
-    // TARGET: Feb 14, 2026
     const target = new Date("Feb 14, 2026 20:30:00").getTime();
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
@@ -131,43 +121,23 @@ function initCountdown() {
     }, 1000);
 }
 
-function setupHeroVideo() {
-    const video = document.getElementById('hero-video');
+// VIDEO INTERACTION (New Requirement)
+window.expandVideo = function() {
+    const video = document.getElementById('heroVideo');
+    if (!video) return;
 
-    if (video) {
-        const enterExperience = () => {
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) { /* Safari */
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { /* IE11 */
-                video.msRequestFullscreen();
-            }
-
-            video.muted = false;
-            video.controls = true;
-            video.play().catch(e => console.log("Play error:", e));
-        };
-
-        video.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-                enterExperience();
-            }
-        });
-
-        const handleExit = () => {
-            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-                video.muted = true;
-                video.controls = false;
-            }
-        };
-
-        document.addEventListener('fullscreenchange', handleExit);
-        document.addEventListener('webkitfullscreenchange', handleExit);
-        document.addEventListener('mozfullscreenchange', handleExit);
-        document.addEventListener('MSFullscreenChange', handleExit);
+    // Request Fullscreen
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
     }
+
+    // Unmute
+    video.muted = false;
+    video.volume = 1.0;
 }
 
 // Global functions
@@ -243,12 +213,9 @@ window.confirmarCompra = async function() {
     }
 }
 
-// Global Gallery Modal Logic
 window.openGallery = function() {
     const modal = document.getElementById('gallery-modal');
     const content = document.getElementById('gallery-content');
-
-    // Show all loaded images
     const images = window.GALLERY_IMAGES;
 
     content.innerHTML = images.map(src => `

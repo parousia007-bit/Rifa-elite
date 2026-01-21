@@ -20,19 +20,14 @@
 
     <section class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
         <!-- Hero Video Section -->
-        <div class="hero-container">
-            <div class="video-wrapper">
-                <video autoplay loop muted playsinline webkit-playsinline class="hero-video" id="hero-video">
-                    <source src="video/hero-lael.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay">
-                    <h1 class="text-4xl font-black italic tracking-tighter text-orange-accent uppercase drop-shadow-md">Rifa Lael</h1>
-                    <p class="text-white text-[10px] font-bold uppercase tracking-widest opacity-80">Toca para ampliar 🔊</p>
-                </div>
-            </div>
+        <div class="video-player-container" style="width: 92%; max-width: 500px; aspect-ratio: 16/9; margin: 20px auto; border: 2px solid #ff6600; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 0 15px rgba(255,102,0,0.3); cursor: pointer;" onclick="expandVideo()">
+            <video id="heroVideo" autoplay loop muted playsinline poster="/img/foto1.jpg" style="width: 100%; height: 100%; object-fit: contain;">
+                <source src="video/hero-lael.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <p class="text-gray-400 max-w-md text-sm mb-8 italic mt-6">10 meses de vida, luchando cada día. Tu ayuda es su esperanza.
+        <h1 class="text-4xl font-black italic tracking-tighter text-orange-accent uppercase drop-shadow-md mt-4">Rifa Lael</h1>
+        <p class="text-gray-400 max-w-md text-sm mb-8 italic mt-2">10 meses de vida, luchando cada día. Tu ayuda es su esperanza.
             <div class="mt-4 mb-2 text-center">
                 <span class="bg-orange-accent/20 text-orange-accent border border-orange-accent/30 px-6 py-2 rounded-full font-black text-xl tracking-tighter italic shadow-lg shadow-orange-accent/10">COSTO POR BOLETO: $100 MXN</span>
             </div>
