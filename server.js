@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error('❌ Error de conexión:', err));
 
 const getBoletosAgrupados = async () => {
-  const tickets = await Boleto.find({}).lean();
+  const tickets = await Boleto.find({}).sort({ serie: 1, numero: 1 }).lean();
   return tickets.reduce((acc, t) => {
     if (!acc[t.serie]) acc[t.serie] = [];
     acc[t.serie].push(t);
