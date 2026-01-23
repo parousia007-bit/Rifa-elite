@@ -3,7 +3,10 @@ import dotenv from 'dotenv';
 import path from 'path';
 
 // Forzamos la ruta del archivo .env para que no marque "undefined"
-dotenv.config({ path: '/data/data/com.termux/files/home/RifaElite/.env' });
+dotenv.config(); // Intento estándar
+if (!process.env.MONGO_URI) {
+    dotenv.config({ path: '/data/data/com.termux/files/home/RifaElite/.env' }); // Fallback Termux
+}
 
 const ticketSchema = new mongoose.Schema({
     serie: String, 

@@ -293,70 +293,32 @@
             ❤️ Comprar Boleto
         </a>
     </div>
-<script>
-    const gallery = document.getElementById("gallery-modal");
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === "class") {
-                const isHidden = gallery.classList.contains("hidden");
-                if (!isHidden) {
-                    document.body.classList.add("modal-locked");
-                    window.history.pushState({ gallery: "open" }, "");
-                } else {
-                    document.body.classList.remove("modal-locked");
-                }
-            }
-        });
-    });
-    observer.observe(gallery, { attributes: true });
-    window.onpopstate = function(event) {
-        if (gallery && !gallery.classList.contains("hidden")) {
-            closeGallery();
-        }
-    };
-</script>
-<script>
-    const gal = document.getElementById("gallery-modal");
-    const body = document.body;
-    const handleScrollLock = () => {
-        if (!gal.classList.contains("hidden")) {
-            body.classList.add("modal-locked");
-            window.history.pushState({ gallery: "open" }, "");
-        } else {
-            body.classList.remove("modal-locked");
-        }
-    };
-    if(gal) observer.observe(gal, { attributes: true, attributeFilter: ["class"] });
-    window.onpopstate = function() { if (!gal.classList.contains("hidden")) closeGallery(); };
-</script>
-<script>
-        const grid = document.getElementById("tickets-grid");
-        if (!grid) return;
 
-        const reservas = {
-            "33": "Miriam", "34": "Miriam", "35": "Miriam", "36": "Miriam", "37": "Miriam", "38": "Miriam",
-            "39": "Miriam", "40": "Miriam", "41": "Miriam", "42": "Miriam", "43": "Miriam", "44": "Miriam",
-            "21": "Maty", "22": "Maty", "23": "Maty", "24": "Maty", "25": "Maty", "26": "Maty",
-            "27": "Maty", "28": "Maty", "29": "Maty", "30": "Maty", "31": "Maty", "32": "Maty"
+    <script>
+        const gallery = document.getElementById("gallery-modal");
+        if (gallery) {
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.attributeName === "class") {
+                        const isHidden = gallery.classList.contains("hidden");
+                        if (!isHidden) {
+                            document.body.classList.add("modal-locked");
+                            window.history.pushState({ gallery: "open" }, "");
+                        } else {
+                            document.body.classList.remove("modal-locked");
+                        }
+                    }
+                });
+            });
+            observer.observe(gallery, { attributes: true, attributeFilter: ["class"] });
+        }
+
+        window.onpopstate = function(event) {
+            if (gallery && !gallery.classList.contains("hidden")) {
+                if (typeof closeGallery === 'function') closeGallery();
+            }
         };
-
-        const tickets = grid.children;
-        for (let t of tickets) {
-            let num = t.innerText.trim();
-            // Si el ticket es de la Serie O y está en el rango
-            if (reservas[num]) {
-                t.style.background = "linear-gradient(135deg, #4b5563 0%, #1f2937 100%)";
-                t.style.border = "1px solid #fbbf24";
-                t.style.color = "#fbbf24";
-                t.style.pointerEvents = "none";
-                t.style.opacity = "0.9";
-                t.innerHTML = `<span style="font-size: 8px; display: block; opacity: 0.7;">APARTADO</span><span style="font-size: 10px; font-weight: 900;">${reservas[num]}</span>`;
-            }
-        }
-    }
-    // Ejecutar cuando se cargue la página y cada vez que cambien de serie
-    const targetGrid = document.getElementById("tickets-grid");
-    if(targetGrid) observer.observe(targetGrid, { childList: true });
-</script>
+    </script>
 </body>
 </html>
 

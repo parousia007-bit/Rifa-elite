@@ -166,8 +166,29 @@ function renderTickets() {
 
     if(!window.bData[window.sActiva]) return;
 
+    // Reservas Manuales (Serie O)
+    const reservas = {
+        "33": "Miriam", "34": "Miriam", "35": "Miriam", "36": "Miriam", "37": "Miriam", "38": "Miriam",
+        "39": "Miriam", "40": "Miriam", "41": "Miriam", "42": "Miriam", "43": "Miriam", "44": "Miriam",
+        "21": "Maty", "22": "Maty", "23": "Maty", "24": "Maty", "25": "Maty", "26": "Maty",
+        "27": "Maty", "28": "Maty", "29": "Maty", "30": "Maty", "31": "Maty", "32": "Maty"
+    };
+
     grid.innerHTML = window.bData[window.sActiva].map(b => {
         const isV = b.estado === 'vendido';
+        const numStr = b.numero.toString();
+        // Check manual reservation (Serie O only)
+        const isReservado = (window.sActiva === 'O' && reservas[numStr]);
+
+        if (isReservado) {
+             return `
+            <div class="h-24 rounded-[30px] flex flex-col items-center justify-center relative transition-all"
+                 style="background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%); border: 1px solid #fbbf24; color: #fbbf24; pointer-events: none; opacity: 0.9;">
+                <span style="font-size: 8px; display: block; opacity: 0.7;">APARTADO</span>
+                <span style="font-size: 10px; font-weight: 900;">${reservas[numStr]}</span>
+            </div>`;
+        }
+
         return `
         <div onclick="${isV ? '' : `abrirM(${b.numero})`}"
              class="h-24 rounded-[30px] flex flex-col items-center justify-center relative transition-all ${isV ? 'sold-card' : 'glass border-white/5 active:scale-95 cursor-pointer'}">
