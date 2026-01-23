@@ -230,3 +230,17 @@ window.openGallery = function() {
 window.closeGallery = function() {
     document.getElementById('gallery-modal').classList.add('hidden');
 }
+function toggleLive() {
+    const modal = document.getElementById('live-modal');
+    const frame = document.getElementById('live-frame');
+    // Reemplaza ID_DE_TU_VIDEO cuando empieces el en vivo
+    const liveUrl = "https://www.youtube.com/embed/live_stream?channel=UCR_c0xjhs0aQvyJBJPFq_2g";
+    
+    if (modal.style.display === 'flex') {
+        modal.style.display = 'none';
+        frame.src = "";
+    } else {
+        modal.style.display = 'flex';
+        frame.src = liveUrl;
+    }
+}

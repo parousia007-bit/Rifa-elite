@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
+    <style>@keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } } @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } } .marquee-container { display: flex; overflow: hidden; mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); } .marquee-content { display: flex; gap: 1rem; animation: scrollLeft 40s linear infinite; width: max-content; } .marquee-reverse { animation: scrollRight 45s linear infinite; } .marquee-content:hover { animation-play-state: paused; } .glass-depth { background: linear-gradient(to top, var(--neon-color), transparent 70%); opacity: 0.3; position: absolute; bottom: 0; left: 0; right: 0; height: 35%; border-radius: 0 0 20px 20px; pointer-events: none; }</style>
+    <style>body.modal-locked { overflow: hidden; height: 100vh; position: fixed; width: 100%; }</style>
+    <style>body.modal-locked { overflow: hidden !important; touch-action: none; -webkit-overflow-scrolling: none; } #gallery-modal { touch-action: pan-y !important; -webkit-overflow-scrolling: touch; }</style>
 </head>
 <body class="pb-20">
 
@@ -124,43 +127,76 @@
         <h2 class="text-3xl font-black text-center text-white uppercase tracking-tighter mb-1 italic">Aliados de Corazón</h2>
         <p class="text-center text-gray-400 text-sm italic mb-6">Empresas, Periodistas y Creadores que amplifican nuestra voz</p>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <!-- Card 1: Tech (RDS) -->
-            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-cyan-400 hover:scale-105 transition-transform">
-                <img src="/img/logo-rds.png" onload="this.parentElement.classList.add('has-logo')" onerror="this.style.display='none'" class="logo-img" alt="RDS Logo">
-                <div class="fallback-icon flex flex-col items-center justify-center text-cyan-400 w-full h-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                    <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center mt-2">RDS Soluciones</h3>
-                    <p class="text-[10px] text-gray-400 text-center leading-tight">Web & Campaña Digital</p>
+        <div class="space-y-4 py-4">
+            
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    
+                    
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-cyan-400 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(34, 211, 238, 0.6);">
+                        <div class="glass-depth"></div>
+                        <img src="/img/logo-rds.png" class="h-28 w-auto object-contain mb-1 relative z-10" alt="RDS">
+                        <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">RDS Soluciones</h3>
+                    </div>
+                    
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-green-400 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(74, 222, 128, 0.6);">
+                         <div class="glass-depth"></div>
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-green-400 mb-1 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+                         <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">Villa Montaña</h3>
+                    </div>
+                    
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-cyan-400 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(34, 211, 238, 0.6);">
+                        <div class="glass-depth"></div>
+                        <img src="/img/logo-rds.png" class="h-28 w-auto object-contain mb-1 relative z-10" alt="RDS">
+                        <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">RDS Soluciones</h3>
+                    </div>
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-green-400 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(74, 222, 128, 0.6);">
+                         <div class="glass-depth"></div>
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-green-400 mb-1 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+                         <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">Villa Montaña</h3>
+                    </div>
                 </div>
             </div>
-
-            <!-- Card 2: Business -->
-            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-green-400 hover:scale-105 transition-transform">
-                <div class="fallback-icon flex flex-col items-center justify-center text-green-400 w-full h-full">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
-                     <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center mt-2">Villa Montaña</h3>
-                     <p class="text-[10px] text-gray-400 text-center leading-tight">Donación x Consumo</p>
+            
+            <div class="marquee-container">
+                <div class="marquee-content marquee-reverse">
+                    
+                    
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-yellow-400 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(250, 204, 21, 0.6);">
+                        <div class="glass-depth"></div>
+                        <img src="/img/cesar-cancino.jpg" class="h-28 w-auto object-cover rounded-lg mb-1 relative z-10" alt="César">
+                        <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">César Cancino</h3>
+                    </div>
+                    
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-orange-500 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(249, 115, 22, 0.6);">
+                        <div class="glass-depth"></div>
+                        <img src="/img/logo-csc.png" class="h-28 w-auto object-contain mb-1 relative z-10" alt="CSC">
+                        <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">CSC</h3>
+                    </div>
+                    
+                    <a href="https://wa.me/529619702540" target="_blank" class="glass aspect-square-card rounded-[20px] border-b-[5px] border-pink-500 bg-pink-500/10 w-44 shrink-0 flex flex-col items-center justify-center relative overflow-hidden no-underline cursor-pointer" style="--neon-color: rgba(236, 72, 153, 0.6);">
+                        <div class="glass-depth"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-pink-500 animate-bounce mb-1 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                        <h3 class="text-[11px] font-black text-pink-500 uppercase italic relative z-10 mb-1">Súmate Aquí</h3>
+                    </a>
+                    
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-yellow-400 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(250, 204, 21, 0.6);">
+                        <div class="glass-depth"></div>
+                        <img src="/img/cesar-cancino.jpg" class="h-28 w-auto object-cover rounded-lg mb-1 relative z-10" alt="César">
+                        <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">César Cancino</h3>
+                    </div>
+                    <div class="glass aspect-square-card rounded-[20px] border-b-[5px] border-orange-500 w-44 shrink-0 flex flex-col items-center justify-end pb-2 relative overflow-hidden" style="--neon-color: rgba(249, 115, 22, 0.6);">
+                        <div class="glass-depth"></div>
+                        <img src="/img/logo-csc.png" class="h-28 w-auto object-contain mb-1 relative z-10" alt="CSC">
+                        <h3 class="text-[11px] font-black text-white uppercase italic relative z-10 mb-1">CSC</h3>
+                    </div>
+                    <a href="https://wa.me/529619702540" target="_blank" class="glass aspect-square-card rounded-[20px] border-b-[5px] border-pink-500 bg-pink-500/10 w-44 shrink-0 flex flex-col items-center justify-center relative overflow-hidden no-underline cursor-pointer" style="--neon-color: rgba(236, 72, 153, 0.6);">
+                        <div class="glass-depth"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-pink-500 animate-bounce mb-1 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                        <h3 class="text-[11px] font-black text-pink-500 uppercase italic relative z-10 mb-1">Súmate Aquí</h3>
+                    </a>
                 </div>
             </div>
-
-            <!-- Card 3: Media -->
-            <div class="glass aspect-square-card rounded-[25px] border-b-4 border-yellow-400 hover:scale-105 transition-transform">
-                <div class="fallback-icon flex flex-col items-center justify-center text-yellow-400 w-full h-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
-                    <h3 class="text-sm font-black text-white uppercase italic mb-1 text-center mt-2">César Cancino</h3>
-                    <p class="text-[10px] text-gray-400 text-center leading-tight">Cobertura Periodística</p>
-                </div>
-            </div>
-
-            <!-- Card 4: CTA -->
-            <a href="https://wa.me/529619702540" target="_blank" class="glass aspect-square-card rounded-[25px] border-b-4 border-pink-500 bg-pink-500/10 hover:bg-pink-500/20 hover:scale-105 transition-all cursor-pointer no-underline">
-                <div class="fallback-icon flex flex-col items-center justify-center text-pink-500 animate-bounce w-full h-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                    <h3 class="text-sm font-black text-pink-500 uppercase italic mb-1 text-center mt-2">Súmate Aquí</h3>
-                    <p class="text-[10px] text-gray-300 text-center leading-tight">Haz la diferencia</p>
-                </div>
-            </a>
         </div>
     </section>
 
@@ -215,7 +251,8 @@
     <section id="boletos" class="p-6 mt-16">
         <div class="flex flex-col items-center mb-8">
             <h2 class="text-3xl font-black italic uppercase mb-6 tracking-tighter text-white">Elige tu número</h2>
-            <a href="/muro.html" target="_blank" class="w-full max-w-md h-14 glass rounded-3xl flex items-center justify-center text-white font-bold text-lg hover:scale-105 transition-transform border border-white/20 shadow-lg no-underline" style="background: rgba(255,255,255,0.1);">🧱 Ver Muro de Héroes ❤️</a>
+        </div>
+            <a href="/muro.html" target="_blank" class="w-full max-w-md h-20 glass rounded-3xl flex flex-col items-center justify-center text-white hover:scale-105 transition-transform border border-white/20 shadow-lg no-underline" style="background: rgba(255,255,255,0.1);"><span class="text-[10px] uppercase tracking-[0.2em] opacity-60 mb-1">Presiona para</span><span class="font-bold text-lg italic">🧱 Ver Muro de Héroes ❤️</span></a>
         </div>
 
         <div id="series-nav" class="flex gap-2 overflow-x-auto no-scrollbar mb-8 py-2 max-w-4xl mx-auto"></div>
@@ -256,7 +293,70 @@
             ❤️ Comprar Boleto
         </a>
     </div>
-    <div class="mini-floating-btn" onclick="openGallery()">📸</div>
+<script>
+    const gallery = document.getElementById("gallery-modal");
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === "class") {
+                const isHidden = gallery.classList.contains("hidden");
+                if (!isHidden) {
+                    document.body.classList.add("modal-locked");
+                    window.history.pushState({ gallery: "open" }, "");
+                } else {
+                    document.body.classList.remove("modal-locked");
+                }
+            }
+        });
+    });
+    observer.observe(gallery, { attributes: true });
+    window.onpopstate = function(event) {
+        if (gallery && !gallery.classList.contains("hidden")) {
+            closeGallery();
+        }
+    };
+</script>
+<script>
+    const gal = document.getElementById("gallery-modal");
+    const body = document.body;
+    const handleScrollLock = () => {
+        if (!gal.classList.contains("hidden")) {
+            body.classList.add("modal-locked");
+            window.history.pushState({ gallery: "open" }, "");
+        } else {
+            body.classList.remove("modal-locked");
+        }
+    };
+    if(gal) observer.observe(gal, { attributes: true, attributeFilter: ["class"] });
+    window.onpopstate = function() { if (!gal.classList.contains("hidden")) closeGallery(); };
+</script>
+<script>
+        const grid = document.getElementById("tickets-grid");
+        if (!grid) return;
+
+        const reservas = {
+            "33": "Miriam", "34": "Miriam", "35": "Miriam", "36": "Miriam", "37": "Miriam", "38": "Miriam",
+            "39": "Miriam", "40": "Miriam", "41": "Miriam", "42": "Miriam", "43": "Miriam", "44": "Miriam",
+            "21": "Maty", "22": "Maty", "23": "Maty", "24": "Maty", "25": "Maty", "26": "Maty",
+            "27": "Maty", "28": "Maty", "29": "Maty", "30": "Maty", "31": "Maty", "32": "Maty"
+        };
+
+        const tickets = grid.children;
+        for (let t of tickets) {
+            let num = t.innerText.trim();
+            // Si el ticket es de la Serie O y está en el rango
+            if (reservas[num]) {
+                t.style.background = "linear-gradient(135deg, #4b5563 0%, #1f2937 100%)";
+                t.style.border = "1px solid #fbbf24";
+                t.style.color = "#fbbf24";
+                t.style.pointerEvents = "none";
+                t.style.opacity = "0.9";
+                t.innerHTML = `<span style="font-size: 8px; display: block; opacity: 0.7;">APARTADO</span><span style="font-size: 10px; font-weight: 900;">${reservas[num]}</span>`;
+            }
+        }
+    }
+    // Ejecutar cuando se cargue la página y cada vez que cambien de serie
+    const targetGrid = document.getElementById("tickets-grid");
+    if(targetGrid) observer.observe(targetGrid, { childList: true });
+</script>
 </body>
 </html>
 
