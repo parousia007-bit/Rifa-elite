@@ -142,8 +142,17 @@ window.expandVideo = function() {
 
 // Global functions
 window.copyCard = function() {
-    navigator.clipboard.writeText("4152314526471894");
-    alert("Tarjeta copiada.");
+    navigator.clipboard.writeText("722969028978826898");
+        const btn = document.querySelector('button[onclick="copyCard()"]');
+    if (btn) {
+        const textoOriginal = btn.innerText;
+        btn.innerText = "✅ ¡COPIADO!";
+        btn.style.backgroundColor = "rgba(0, 158, 227, 0.4)";
+        setTimeout(() => {
+            btn.innerText = textoOriginal;
+            btn.style.backgroundColor = "";
+        }, 2000);
+    }
 }
 
 function renderSeries() {
